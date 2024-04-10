@@ -3,9 +3,13 @@
 About the [Footprint Builder](https://model.earth/io/template/)
 About [Open Footprint Data (useeio.js)](https://model.earth/useeio.js/footprint/)
 
-[View on GitHub](https://github.com/modelearth/OpenFootprint/) - [Building Transparency Data](https://github.com/ModelEarth/OpenFootprint/tree/main/products/US) and [EPA State Impact Data](https://github.com/ModelEarth/OpenFootprint/tree/main/impacts/2020)
+[View on GitHub](https://github.com/modelearth/OpenFootprint/)
 
-Cement is about 50% of footprint listings, so we exclude it from the product folder.
+**Data Sources**
+- [US EPA State Industry Impacts](https://github.com/ModelEarth/OpenFootprint/tree/main/impacts/2020)
+- [BuildingTransparency.org State Products](https://github.com/ModelEarth/OpenFootprint/tree/main/products/US)
+
+Cement is about 50% of listings, so we store cement profiles separately in the [cement folder](https://github.com/ModelEarth/OpenFootprint/tree/main/cement/).
 
 
 
