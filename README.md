@@ -1,7 +1,7 @@
 # Open Footprint
 
-About the [Footprint Builder](https://model.earth/io/template/)
-About [Open Footprint Data (useeio.js)](https://model.earth/useeio.js/footprint/)
+About the [Footprint Builder](/io/template/)
+About [Open Footprint Data (useeio.js)](/useeio.js/footprint/)
 
 [View on GitHub](https://github.com/modelearth/OpenFootprint/)
 
