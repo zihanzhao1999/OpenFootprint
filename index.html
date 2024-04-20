@@ -7,13 +7,102 @@
 <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<script type="text/javascript" src="https://model.earth/localsite/js/localsite.js?showheader=true"></script>
+<!-- For menu.js -->
+<link type="text/css" href="/localsite/css/base.css" rel="stylesheet" id="/localsite/css/base.css" />
+<script type="text/javascript" src="/localsite/js/jquery.min.js" id="/localsite/js/jquery.min.js"></script>
+<script type="text/javascript" src="/localsite/js/localsite.js?showheader=true"></script>
+
 
 <script>
 loadMarkdown("README.md", "readmeDiv", "_parent");
+loadMarkdown("menu.md", "menuDiv", "_parent");
 </script>
 
 <style>
+h2 {
+    font-size: 32px;
+    padding-top: 20px;
+    font-weight: 300;
+    font-family: "Amaze", "Helvetica Neue", Helvetica, "Lato", sans-serif;
+}
+.headerImage{
+    display: none;
+}
+#fullcolumn {
+    backgroundX: #fafafa;
+}
+.gobutton {
+    margin: 0px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 14px 12px 15px 12px;
+    min-height: 38px;
+    color: #fff;
+    box-sizing: border-box;
+    background: #555;
+    height: 48px;
+    text-decoration: none;
+}
+.resultsHolder {
+    background: rgba(33,33,33,0.95);
+    color: #fff;
+    padding: 10px 20px 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    line-height: 26px;
+}
+.txtbox {
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    width: 100%;
+    max-width: 190px;
+    padding: 0 20px;
+    height: 48px;
+    line-height: 60px;
+    font-size: 24px;
+    color: #777;
+    border: solid 1px #b7b7b7;
+    border-radius: 5px;
+    margin-right: 7px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    float: left;
+}
+@media (max-width: 1200px) {
+    #rightcolumn {
+        display:none;
+    }
+}
+.popout {
+    border: 1px solid #ccc;
+    padding: 30px;
+    width:100%;
+    background:#eee;
+}
+.popout > h3 {
+    margin-top:0px;
+}
+
+/* not yet working in widget bucket */
+ol > li:before {
+    border-radius:20px;
+    background: red;
+}
+ol > li {
+    colorX: blue;
+}
+.hideOnProjectsPage {
+    display: none;
+}
+.projectsPage {
+    display: block !important;
+}
+.sideMenuColumn {
+  width: auto !important;
+}
 </style>
 </head>
 
@@ -21,6 +110,56 @@ loadMarkdown("README.md", "readmeDiv", "_parent");
 
 <div class="content contentpadding" style="padding-top:50px;">
   <div id="readmeDiv"></div>
+
+  <!-- Also update community/projects -->
+  <!-- OpenFootprint -->
+    <section id="widgets">
+    <div class="pagecard">
+        <div class="cardstyle rowX" style="padding:0px">
+          <!-- background-color:#eee; background-color:#f5fafb; -->
+          <div class="table-cell sideMenuColumn" style="padding-top:30px;">
+                <!-- style="width:150px" -->
+                
+                <div id="scopeMenu"></div>
+                <!--
+                <link type="text/css" rel="stylesheet" href="/localsite/css/menu.css" id="/localsite/css/menu.css" />
+                -->
+                <script type="text/javascript" src="/localsite/js/menu.js" id="/localsite/js/menu.js"></script>
+
+                <script>
+                scopeMenu={};
+                scopeMenu.current = "Special"
+                scopeMenu.layerJson = "/localsite/info/data/scope-menu.json";
+                scopeMenu.revealButton = "#showScope"
+                scopeMenu.menuDiv = "#scopeMenu";
+                initMenu(scopeMenu);
+                </script>
+    
+          </div>
+          <div class="table-cell menuBuddy" style="padding-top:18px;padding-right:18px">
+              <div id="widgetsDiv" style="padding:0 40px"></div>
+              <div id="menuDiv"></div>
+          </div>
+          <div class="table-cell menuBuddyRight" style="padding:20px; padding-top:30px; min-width:350px;max-width:400px;background-color: #f5fafb;">
+                <div style="text-align: center;">
+                    <div style="display:inline-block; background-color:#ddd; border-radius:100px; width:200px; height:200px">&nbsp;</div>
+                    <h1 style="margin:0px; padding:0px">Menu Item</h1>
+                    <h5 style="margin:0px; padding:0px">Nutritional Impact Label</h5>
+                    <br>
+                    <!-- YAML TO HTML ->
+
+                    <br>
+                </div>
+                <div style="padding:0 20px;">
+                The label above is formated in HTML on our <a href="../../io/template/">Environmental Impact Profiles page</a>.
+                </div>
+          </div>
+        </div>
+    </div>
+    </section>
+    <!-- /OpenFootprint -->
+
+
 </div>
 
 </body>
