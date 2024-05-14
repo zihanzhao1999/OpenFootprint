@@ -10,11 +10,11 @@ Environmental Product Declarations (EPD)
 [EPD Profiles on GitHub](https://github.com/ModelEarth/OpenFootprint/tree/main/products/US)
 Python resides in prep/product-footprints-bkup.py
 
-## API for Product Profile YAML
-
 <a href="/io/template/parser/">View parsed YAML-TO-JSON-TO-HTML</a>
 <a href="/io/template/product/product-concrete.html">View as Markdown</a>
 
+
+## Get API Key for Product Profile YAML
 
 The [Central Concrete EPD data](https://github.com/modelearth/io/blob/master/template/product/product-concrete.yaml) was pulled from the BuildingTransparency.org API using the following steps:  
 
