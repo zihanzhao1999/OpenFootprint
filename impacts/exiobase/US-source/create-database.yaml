@@ -45,40 +45,75 @@ CommodityUS:
 ImportSectorUS:
   source: Regional_summary_import_factors_exio_2020_17sch.csv
   columns:
-    CountryCode: CountryCode
-    SectorID: SectorID
+    CountryCode: Region
+    SectorID: Sector
     FlowUUID: FlowUUID
     FlowAmount: FlowAmount
+  omit:
+    - Year
+    - Unit
+    - ReferenceCurrency
+    - PriceType
+    - Flowable
+    - Context
+    - BaseIOLevel
 
 ImportCommodityUS:
   source: Regional_detail_import_factors_exio_2020_17sch.csv
   columns:
-    CountryCode: CountryCode
-    CommodityID: CommodityID
+    CountryCode: Region
+    CommodityID: Sector
     FlowUUID: FlowUUID
     FlowAmount: FlowAmount
+  omit:
+    - Year
+    - Unit
+    - ReferenceCurrency
+    - PriceType
+    - Flowable
+    - Context
+    - BaseIOLevel
 
 ImportContributionsUS:
   source: country_contributions_by_sector.csv
   columns:
     CountryCode: CountryCode
     CommodityID: "BEA Detail"
-    ImportQuantity: ImportQuantity
-    ContributionImportSector: ContributionImportSector
-    ContributionImportCommodity: ContributionImportCommodity
-    ContributionSector: ContributionSector
-    ContributionCommodity: ContributionCommodity
+    ImportQuantity: "Import Quantity"
+    ContributionImportSector: cntry_cntrb_to_national_detail   
+    ContributionImportCommodity: cntry_cntrb_to_region_detail
+    ContributionSector: cntry_cntrb_to_national_summary
+    ContributionCommodity: cntry_cntrb_to_region_summary
   omit:
+    - Year
     - Country
-    - Region
     - Unit
     - Source
     - BEA Summary
+    - Region
 
 ImportMultiplierUS:
   source: multiplier_df_exio_2020_17sch.csv
   columns:
     CountryCode: CountryCode
-    CommodityID: CommodityID
+    CommodityID: "BEA Detail"
+    Output: Output
+    ImportQuantity: "Import Quantity"
+    ContributionImportSector: cntry_cntrb_to_national_detail   
+    ContributionImportCommodity: cntry_cntrb_to_region_detail
+    ContributionSector: cntry_cntrb_to_national_summary
+    ContributionCommodity: cntry_cntrb_to_region_summary
     FlowUUID: FlowUUID
-    Footprint: Footprint
+    Footprint: EF
+  omit:
+    - Region
+    - BaseIOSchema
+    - BEA Summary
+    - Year
+    - Source
+    - Country
+    - Unit
+    - ReferenceCurrency
+    - PriceType
+    - Flowable
+    - Context
