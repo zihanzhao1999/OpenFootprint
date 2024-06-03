@@ -81,7 +81,7 @@ ImportCommodityUS:
     - BaseIOLevel
 
 ImportContributionsUS:
-  source: country_contributions_by_sector.csv
+  source: country_contributions_by_sector_2020.csv
   columns:
     CountryCode: CountryCode
     CommodityID: "BEA Detail"
