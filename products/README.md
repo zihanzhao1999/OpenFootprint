@@ -5,7 +5,7 @@
 Environmental Product Declarations (EPD)
 
 [Open Footprint Panels](../)
-[Feed View - Hierarchy](/feed/view/#feed=epd)
+[Feed View Hierarchy](/feed/view/#feed=epd)
 [Product Feed API](/io/template/feed)
 [View parsed YAML-TO-JSON-TO-HTML](/io/template/parser/)
 <!--[View as Markdown](/io/template/product/product-concrete.html)-->
