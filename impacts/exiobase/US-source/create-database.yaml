@@ -84,8 +84,8 @@ ImportContributionsUS:
   source: country_contributions_by_sector_2020.csv
   columns:
     CountryCode: CountryCode
-    CommodityID: "BEA Detail"
-    ImportQuantity: "Import Quantity"
+    CommodityID: "BEA_Detail"
+    ImportQuantity: "Import_Quantity"
     ContributionImportSector: cntry_cntrb_to_national_detail   
     ContributionImportCommodity: cntry_cntrb_to_region_detail
     ContributionSector: cntry_cntrb_to_national_summary
@@ -102,9 +102,9 @@ ImportMultiplierUS:
   source: multiplier_df_exio_2020_17sch.csv
   columns:
     CountryCode: CountryCode
-    CommodityID: "BEA Detail"
+    CommodityID: "BEA_Detail"
     Output: Output
-    ImportQuantity: "Import Quantity"
+    ImportQuantity: "Import_Quantity"
     ContributionImportSector: cntry_cntrb_to_national_detail   
     ContributionImportCommodity: cntry_cntrb_to_region_detail
     ContributionSector: cntry_cntrb_to_national_summary
