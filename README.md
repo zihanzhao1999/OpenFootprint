@@ -1,3 +1,5 @@
-About [USEEIO Open Footprint Data](/useeio.js/footprint/)
-About [Model.earth Footprint Builder](/io/template/)
-About [USDA Food Data API](https://fdc.nal.usda.gov/api-guide.html)
+**Data Sources**
+&bullet; [SQL Input-Output Data Prep](/useeio.js/footprint/)  
+&bullet; [US EPA State Industry Impacts](https://github.com/ModelEarth/OpenFootprint/tree/main/impacts/2020)
+&bullet; [BuildingTransparency Product Footprints](products)
+&bullet; [All the Places](https://model.earth/places/) - [Locations by postal code](https://github.com/ModelEarth/places-data/tree/main/location/2023/US)
