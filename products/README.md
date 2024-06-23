@@ -1,5 +1,5 @@
 [Footprint Builder](/io/template)
-# Product Footprints
+# Product Comparisons
 
 **BuildingTransparency.org API**
 Environmental Product Declarations (EPD)
@@ -11,7 +11,7 @@ Environmental Product Declarations (EPD)
 <!--[View as Markdown](/io/template/product/product-concrete.html)-->
 
 
-# Fetch Product Footprints
+# Fetch Product Data
 
 [Our EPD Pull on GitHub](https://github.com/ModelEarth/OpenFootprint/tree/main/products/) - [Resulting Data](https://github.com/ModelEarth/OpenFootprint/tree/main/products/US)
 Python resides in prep/product-footprints.py
