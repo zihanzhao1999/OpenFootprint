@@ -1,3 +1,7 @@
+# Supabase
+
+## Indexes and Keys
+
 We explored the following indexes for optimizing the data in the Supabase database:
 
 B-tree Index: Good for general-purpose indexing.
