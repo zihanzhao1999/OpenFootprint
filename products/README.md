@@ -4,21 +4,22 @@
 **BuildingTransparency.org API**
 Environmental Product Declarations (EPD)
 
-[Open Footprint Panels](../)
-[Feed View Hierarchy](/feed/view/#feed=epd)
+[Open Data Panels](../)
+[Feed View - Static EPD json](/feed/view/#feed=epd)
 [Product Feed API](/io/template/feed)
 [View parsed YAML-TO-JSON-TO-HTML](/io/template/parser/)
 <!--[View as Markdown](/io/template/product/product-concrete.html)-->
 
 
-# Fetch Product Data
+## Fetch Product Data
 
 [Our EPD Pull on GitHub](https://github.com/ModelEarth/OpenFootprint/tree/main/products/) - [Resulting Data](https://github.com/ModelEarth/OpenFootprint/tree/main/products/US)
 Python resides in prep/product-footprints.py
 
-June 3, 2024
-Loren copied product-footprints.py into [Product Footprints Colab](https://colab.research.google.com/drive/1TJ1fn0-_8EBryN3ih5hZiKLISomOrWDW?usp=sharing)
-Haven't run as CoLab yet, need Helper.py to save username and password.
+June 3, 2024 - <!--Loren -->Copied product-footprints.py into [Product Footprints Colab](https://colab.research.google.com/drive/1TJ1fn0-_8EBryN3ih5hZiKLISomOrWDW?usp=sharing)
+Haven't run as CoLab yet.
+
+TO DO: add Helper.py to save username and password since it expires
 
 
 ## Get API Key for Product Profile YAML
