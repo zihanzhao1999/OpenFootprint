@@ -1,4 +1,5 @@
-**Processes**  
-&bullet; [Supabase/DuckDB SQL Loaders](prep/)
-&bullet; [DuckDB Tabulator Sample](impacts/)  
-&bullet; [Open Footprint Builder](/io/template/)
+**Data Sources**
+&bullet; [International Trade (SQL)](/useeio.js/footprint/)  
+&bullet; [State Data (SQL)](/io/about)
+&bullet; [Product Comparisons](products)
+&bullet; [All the Places](https://model.earth/places/) - [Locations by Zip](https://github.com/ModelEarth/places-data/tree/main/location/2023/US)
