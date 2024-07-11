@@ -1,4 +1,4 @@
-**Upcoming**  
-&bullet; [SQL Supabase and DuckDB](prep/)
+**Processes**  
+&bullet; [Supabase/DuckDB SQL Loaders](prep/)
 &bullet; [DuckDB Tabulator Sample](impacts/)  
-&bullet; [Model.earth Footprint Builder](/io/template/)
+&bullet; [Open Footprint Builder](/io/template/)

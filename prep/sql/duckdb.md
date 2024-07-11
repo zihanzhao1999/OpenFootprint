@@ -1,6 +1,3 @@
-[Open Data Panels](../../)
-Documentation of our DuckDB and Supabase SQL loaders
-
 # DuckDB Data Loader
 
 ## Overview
