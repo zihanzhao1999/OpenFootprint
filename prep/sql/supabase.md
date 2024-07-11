@@ -1,6 +1,6 @@
 # Supabase Loader
 
-This script allows you to load data from a CSV file into a Supabase database table. It provides options to choose between loading data from a URL or a local file, and also gives the flexibility to delete existing data before adding new data or to append new data to the existing records.
+The [supabase\_db\_loader.py script](https://github.com/ModelEarth/OpenFootprint/tree/main/prep/sql) allows you to load data from a CSV file into a Supabase database table. It provides options to choose between loading data from a URL or a local file, and also gives the flexibility to delete existing data before adding new data or to append new data to the existing records.
 
 ## Requirements
 

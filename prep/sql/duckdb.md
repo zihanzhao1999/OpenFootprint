@@ -1,7 +1,7 @@
 # DuckDB Data Loader
 
 ## Overview
-This script is designed to load data from a CSV file into a DuckDB database. It provides flexibility in loading data from both a URL and a local file, dynamically creating a table in DuckDB based on the columns of the input data, and allowing users to choose whether to append new data to an existing table or replace existing data.
+The [load\_data.py script](https://github.com/ModelEarth/OpenFootprint/tree/main/prep/sql) is designed to load data from a CSV file into a DuckDB database. It provides flexibility in loading data from both a URL and a local file, dynamically creating a table in DuckDB based on the columns of the input data, and allowing users to choose whether to append new data to an existing table or replace existing data.
 
 ## Requirements
 - Python 3.x
