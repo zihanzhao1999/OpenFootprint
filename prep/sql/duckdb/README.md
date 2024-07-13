@@ -18,9 +18,9 @@ The <!-- Loren couldn't find load_data.py, so he's guessing duckdb-db-loader.py 
    ```sh
    pip install duckdb pandas
    ```
-3. Run the script `load_data.py`:
+3. Run the script `duckdb-db-loader.py`:
    ```sh
-   python load_data.py
+   python duckdb-db-loader.py
    ```
 4. Follow the prompts:
    - Choose whether to load data from a URL or a local file.
