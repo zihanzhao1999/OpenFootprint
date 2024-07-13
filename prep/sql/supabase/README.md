@@ -1,6 +1,10 @@
-# Data Loader for Supabase
+[Open Data Panels](../../) and [International Trade Flow](/useeio.js/footprint/)
 
-This script loads data into a Supabase PostgreSQL database from CSV files based on a configuration specified in a YAML file. It provides options to load data either from URLs or local file paths and allows the user to either delete existing data in a table or append to it if the table already exists.
+# Supabase Data Loader
+
+This script loads data into a [Supabase PostgreSQL](https://supabase.com) database from CSV files based on a configuration specified in a YAML file. It provides options to load data either from URLs or local file paths and allows the user to either delete existing data in a table or append to it if the table already exists. Also see our [DuckDB Data Loader](../duckdb/).
+
+[Javascript Table View](SupabaseWebpage.html)
 
 ## Features
 

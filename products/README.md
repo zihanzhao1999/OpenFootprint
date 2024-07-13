@@ -1,10 +1,9 @@
-[Footprint Builder](/io/template)
+[Footprint Builder](/io/template) and [Open Data Panels](../)
 # Product Comparisons
 
 **BuildingTransparency.org API**
 Environmental Product Declarations (EPD)
 
-[Open Data Panels](../)
 [Feed View - Static EPD json](/feed/view/#feed=epd)
 [Product Feed API](/io/template/feed)
 [View parsed YAML-TO-JSON-TO-HTML](/io/template/parser/)
@@ -19,7 +18,7 @@ Python resides in prep/product-footprints.py
 June 3, 2024 - <!--Loren -->Copied product-footprints.py into [Product Footprints Colab](https://colab.research.google.com/drive/1TJ1fn0-_8EBryN3ih5hZiKLISomOrWDW?usp=sharing)
 Haven't run as CoLab yet.
 
-TO DO: add Helper.py to save username and password since it expires
+TO DO: Activate Helper.py to save username and password since it expires
 
 
 ## Get API Key for Product Profile YAML
