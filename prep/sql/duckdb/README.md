@@ -54,7 +54,7 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 ---
 
-** When loading local CSV files, provide pathes using slashes (/) rather than a backslashes (\\).
+** When loading local CSV files, provide paths using slashes (/) rather than a backslashes (\\).
 
 
 <br>

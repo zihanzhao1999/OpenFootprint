@@ -155,4 +155,4 @@ For multiple primary keys, we have added separate B-tree indexes instead of a co
 
 ---
 
-** When loading local CSV files, provide pathes using slashes (/) rather than a backslashes (\\).
+** When loading local CSV files, provide paths using slashes (/) rather than a backslashes (\\).
