@@ -20,7 +20,7 @@ Table migrations and column names are set in [create-database.yaml](https://gith
    ```sh
    pip install duckdb pandas
    ```
-3. Run the script `duckdb-db-loader.py`:
+3. Run the script duckdb-db-loader.py:
    ```sh
    python duckdb-db-loader.py
    ```
@@ -85,21 +85,12 @@ duckdb
 
 ### Setup
 
-Install Python Dependencies:
-
 Install required Python packages using pip:
 
-pip install requests yaml pandas duckdb
+   pip install requests yaml pandas duckdb
 
-Clone the Repository:
 
-Clone this repository to your local machine:
-
-bash
-
-    git clone https://github.com/your_username/your_repo.git
-
-Download DuckDB:
+### Download DuckDB:
 
 Download and install DuckDB from DuckDB website.
 
