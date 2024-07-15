@@ -11,6 +11,13 @@
 
 <script>
 loadMarkdown("README.md", "readmeDiv", "_parent");
+
+document.addEventListener('hashChangeEvent', function (elem) {
+  console.log("SQL page detects URL hashChangeEvent");
+  # call a function in the page
+  # hashChangedUpdateSQL();
+}, false);
+
 </script>
 </head>
 
