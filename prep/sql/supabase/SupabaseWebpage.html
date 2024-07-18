@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Supabase Data Display</title>
 
   <link type="text/css" rel="stylesheet" href="/localsite/css/base.css" id="/localsite/css/base.css" />
@@ -28,8 +29,10 @@
   <a href="../../../">Open Data Panels</a>
   <h1>Data from Supabase</h1>
   <label for="table-select"></label>
-  <select id="table-select"></select>
+  <select id="table-select" onchange="fetchAndPopulate()"></select>
   <button onclick="fetchAndPopulate()" class="btn btn-success">View</button>
+
+  <div id="dataMessage"></div>
 
   <table id="data-table">
     <thead id="table-headers">
@@ -107,7 +110,6 @@
     function populateTable(data) {
       const tableBody = document.getElementById('table-body');
       tableBody.innerHTML = '';
-
       data.forEach(row => {
         const tableRow = document.createElement('tr');
         Object.keys(row).forEach(key => {
@@ -140,8 +142,12 @@
       const selectedTable = tableSelect.value;
 
       if (!selectedTable) {
-        console.error('No table selected');
+        document.getElementById('dataMessage').innerHTML  = "<div style='padding:10px'>No table selected.</div>";
+        document.getElementById('table-headers').innerHTML = '';
+        document.getElementById('table-body').innerHTML = '';
         return;
+      } else {
+        document.getElementById('dataMessage').innerHTML  = "";
       }
 
       const data = await fetchData(selectedTable);
