@@ -1,14 +1,19 @@
 [Footprint Builder](/io/template) and [Open Data Panels](../)
 # Product Comparisons
 
-**BuildingTransparency.org API**
-Environmental Product Declarations (EPD)
+**Environmental Product Declarations (EPD)**
+From BuildingTransparency.org API
 
-[Feed View - Static EPD json](/feed/view/#feed=epd)
-[Product Feed API](/io/template/feed)
+[About our Nutrition-style Labels](/io/template/)
+[View state .csv files pulled from API](https://github.com/ModelEarth/OpenFootprint/tree/main/products/US)
 [View parsed YAML-TO-JSON-TO-HTML](/io/template/parser/)
+[BuildingTransparency Feed View (Static EPD json)](/feed/view/#feed=epd)
+[Product Feed API](/io/template/feed)
 <!--[View as Markdown](/io/template/product/product-concrete.html)-->
 
+
+How to run our repos in a Webroot folder on your computer:
+[model.earth/localsite/start/steps](/localsite/start/steps)
 
 ## Fetch Product Data
 
