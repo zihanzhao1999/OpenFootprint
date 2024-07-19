@@ -24,7 +24,7 @@ jobs:
         pip install requests pandas pyyaml
 
     - name: Run update script
-      run: python yash9933/OpenFootprint/blob/main/products/pull/update_csv_and_yaml.py
+      run: python products/pull/update_csv_and_yaml.py
 
     - name: Commit and push changes
       run: |
