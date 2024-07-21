@@ -18,6 +18,7 @@ How to run our repos in a Webroot folder on your computer:
 ## Fetch Product Data
 
 [Python for our EPD pull](https://github.com/ModelEarth/OpenFootprint/tree/main/products/pull/)<!-- product-footprints.py --> - [Resulting Data](https://github.com/ModelEarth/OpenFootprint/tree/main/products/US)
+We're also experimenting with [pulling directly to json](pull/get-json/)
 
 TO DO: Pull csv lists for all states (without cement). Save details as indvidual YAML files. - Yash
 
@@ -25,6 +26,8 @@ June 3, 2024 - <!--Loren -->We copied [product-footprints-bkup.py](https://githu
 (We haven't run as CoLab yet.)
 
 TO DO: Activate products/pull/helper.py to refresh API key when it expires using username and password stored in a private config variable.
+
+Active notes are in our Discord group.
 
 
 ## Get API Key for Product Profile YAML

@@ -1,4 +1,5 @@
-## JSON Pull Attempt
+[Product Comparisons](../../)
+# JSON Pull Attempt
 
 The following is a copy of script used in the [useeio.js](https://github.com/modelearth/useeio.js) repo to download the full API to json files.
 
