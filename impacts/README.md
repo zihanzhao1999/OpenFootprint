@@ -1,13 +1,22 @@
-[International Trade Flow](/useeio.js/footprint/)
+[International Trade Flow](/useeio.js/footprint/) and [Existing IO Widgets](/io/charts/)
 # OpenFootprint SQL Projects
+
+Visalizations will use the upcoming [USEEIO 50 State JSON API](https://github.com/ModelEarth/OpenFootprint/tree/main/impacts/2020)  
 
 TO DO: In the [Supabase data display](../prep/sql/supabase/SupabaseWebpage.html), add options that merge table in Javascript (Perhaps LEFT JOINs) to provide data for charts.
 
-We'll display the 3 charts using external javascript files:  
+Pull from Supabase API into a trade flow map and other charts. 
+We'll display the 3 charts using external javascript files shared with other pages.
 
 TO DO: <a href="/OpenFootprint/trade/">Trade Flow Map</a>  
 TO DO: <a href="/useeio.js/charts/d3/chord-diagram/">Chord (D3)</a><!-- https://nivo.rocks/chord/ -->  
 TO DO: <a href="/useeio.js/charts/echarts/sankey-nodeAlign-left.html">Sankey (eCharts)</a>
+
+Also see our [timeline chart development](/data-pipeline/timelines/earthscape/datacommons.html) with Google Data Commons.
+
+<!--
+Here's another <a href="https://github.com/ModelEarth/trademapper-js">trade flow map</a> we could expand. It's visible at <a href="https://trademapper.co.uk">trademapper.co.uk</a> with sample data in their <a href="https://github.com/trademapper/trademapper-js/wiki/How-to-use-trademapper">GitHub Wiki</a>.
+-->
 
 <hr>
 
