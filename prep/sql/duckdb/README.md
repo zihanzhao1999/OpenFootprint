@@ -2,7 +2,9 @@
 
 # DuckDB Data Loader
 
-Also see our [Supabase Data Loader page](../../sql/supabase)
+Also see our [Supabase Data Loader page](../../sql/supabase) and [TO DO List](../../../impacts/)
+
+View our [Javascript for DuckDB](tables.html) - TO DO: Debug Javascript
 
 ## Overview
 The <!-- Loren couldn't find load_data.py, so he's guessing duckdb-db-loader.py is the new name. -->[duckdb-db-loader.py](https://github.com/ModelEarth/OpenFootprint/blob/main/prep/sql/duckdb/duckdb-db-loader.py)  script is designed to load data from a CSV file into a DuckDB database. It provides flexibility in loading data from both a URL and a local file, dynamically creating a table in [DuckDB](https://duckdb.org/docs/api/r.html) based on the columns of the input data, and allowing users to choose whether to append new data to an existing table or replace existing data.
