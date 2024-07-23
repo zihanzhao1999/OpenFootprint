@@ -1,4 +1,4 @@
-[Open Data Panels](../../) and [International Trade Flow](/useeio.js/footprint/)
+[International Trade Flow](/useeio.js/footprint/) and [SQL Data Loaders](../../)
 
 # Supabase Data Loader
 
