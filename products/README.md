@@ -22,10 +22,10 @@ We're also experimenting with [pulling directly to json](pull/get-json/)
 
 TO DO: Pull csv lists for all states (without cement). Save details as indvidual YAML files. - Yash
 
-June 3, 2024 - <!--Loren -->We copied [product-footprints-bkup.py](https://github.com/ModelEarth/OpenFootprint/tree/main/products/pull/) into [Product Footprints Colab](https://colab.research.google.com/drive/1TJ1fn0-_8EBryN3ih5hZiKLISomOrWDW?usp=sharing)
+June 3, 2024 - <!--Loren -->We copied [product-footprints.py](https://github.com/ModelEarth/OpenFootprint/tree/main/products/pull/) into [Product Footprints Colab](https://colab.research.google.com/drive/1TJ1fn0-_8EBryN3ih5hZiKLISomOrWDW?usp=sharing)
 (We haven't run as CoLab yet.)
 
-TO DO: Activate products/pull/helper.py to refresh API key when it expires using username and password stored in a private config variable.
+For products/pull/product-footprints.py you can set your BuildingTransparency email and password in myconfig.py to call the API.
 
 Active notes are in our Discord group.
 
