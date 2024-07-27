@@ -1,22 +1,27 @@
 [International Trade](/useeio.js/footprint/)
 # Harmonized System (HS)
 
-[How to use R-Language libraries in a Python CoLab (2nd example)](https://www.geeksforgeeks.org/how-to-use-r-with-google-colaboratory/)
+TO DO: Create a copy of the [Supabase SQL insert python](../prep/sql/supabase/) and add HS tables.
 
-[Our CoLab](https://colab.research.google.com/drive/1etpn1no8JgeUxwLr_5dBFEbt8sq5wd4v?usp=sharing)
-
-Sample use of [Product HS Codes](https://model.georgia.org/display/exporters/)
+Sample use of [Product HS Codes for Georgia Exporter Directory](https://model.georgia.org/display/exporters/)
 
 ## Concordance
 
-We use an R package called [Concordance](https://github.com/insongkim/concordance) for international industry lookups.
+The Concordance R-library is the leading process for lookups:
+Harmonized System (HS), ISIC/SITC and NAICS
 
-Concordance is the leading process for lookups:
-Harmonized System (HS),  ISIC/SITC and NAICS
 
+**While R-Language was ultimately not used in our HS pull, you might find this useful**
+[How to use R-Language libraries in a Python CoLab (2nd example)](https://www.geeksforgeeks.org/how-to-use-r-with-google-colaboratory/)
+[Our CoLab](https://colab.research.google.com/drive/1etpn1no8JgeUxwLr_5dBFEbt8sq5wd4v?usp=sharing) for interacting with R from Python - not used here, but you could expand on this.
+We ended up NOT using the Concordance R package directly.
+<!--
 [Chinese sectors](https://chatgpt.com/share/dbb6de4b-1366-4190-b284-3b7165951c61),  ISIC,  and the Harmonized System (HS)
+-->
 
-## 3 CSV Files
+Instead we used raw files in the [Concordance GitHub Repo](https://github.com/insongkim/concordance/tree/master/data-raw) as our source for CSV lookup files.
+
+## CSV Lookup Files
 
 HS (4-digit)
 HS-Description
@@ -28,7 +33,9 @@ HS-Description
 ISIC-Code (2-digits multiple)
 ISIC-Description 
 
+<!--
 HS (4-digit)
 HS-Description
 Chinese-Sector-Code (2-digits)
 Chinese-Sector-Description
+-->
