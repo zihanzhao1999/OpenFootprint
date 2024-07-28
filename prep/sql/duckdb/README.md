@@ -10,6 +10,7 @@ View our [Javascript for DuckDB](tables.html) - TO DO: Debug Javascript or start
 The <!-- Loren couldn't find load_data.py, so he's guessing duckdb-db-loader.py is the new name. -->[duckdb-db-loader.py](https://github.com/ModelEarth/OpenFootprint/blob/main/prep/sql/duckdb/duckdb-db-loader.py)  script is designed to load data from a CSV file into a DuckDB database. It provides flexibility in loading data from both a URL and a local file, dynamically creating a table in [DuckDB](https://duckdb.org/docs/api/r.html) based on the columns of the input data, and allowing users to choose whether to append new data to an existing table or replace existing data.
 
 Table migrations and column names are set in [create-database.yaml](https://github.com/ModelEarth/OpenFootprint/blob/main/impacts/exiobase/US-source/create-database.yaml)
+The resulting 8.4MB **US-2020-17schema.duckdb** database resides in [OpenFootprint/impacts/exiobase/US-source](https://github.com/ModelEarth/OpenFootprint/tree/main/impacts/exiobase/US-source)
 
 ## Requirements
 - Python 3.x

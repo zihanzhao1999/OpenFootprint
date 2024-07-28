@@ -23,11 +23,13 @@ Instead we used raw files in the [Concordance GitHub Repo](https://github.com/in
 
 ## CSV Lookup Files
 
+**HarmonizedNAICS**
 HS (4-digit)
 HS-Description
 NAICS (4-digits multiple)
 NAICS-Description
 
+**HarmonizedISIC**
 HS (4-digit)
 HS-Description
 ISIC-Code (2-digits multiple)
