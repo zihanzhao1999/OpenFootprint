@@ -1,6 +1,5 @@
-import requests, json, csv, logging, multiprocessing, pandas as pd, yaml
+import requests, json, csv, logging, multiprocessing, pandas as pd, yaml, os
 from functools import partial
-from helper import user, password
 
 states = ['US-GA', 'US-ME', 'US-OR']
 epds_url = "https://buildingtransparency.org/api/epds"
@@ -14,9 +13,9 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-def log_error(status_code: int, reponse_body: str):
+def log_error(status_code: int, response_body: str):
     logging.error(f"Request failed with status code: {status_code}")
-    logging.debug("Response body:" + reponse_body)
+    logging.debug("Response body:" + response_body)
 
 def get_auth():
     url_auth = "https://etl-api.cqd.io/api/rest-auth/login"
@@ -25,13 +24,13 @@ def get_auth():
         "Content-Type": "application/json"
     }
     payload_auth = {
-        "username": user,
-        "password": password
+        "username": os.getenv('web@model.earth'),
+        "password": os.getenv('getTheData123#')
     }
     response_auth = requests.post(url_auth, headers=headers_auth, json=payload_auth)
     if response_auth.status_code == 200:
         authorization = 'Bearer ' + response_auth.json()['key']
-        print("Fetch the new token successfully")
+        print("Fetched the new token successfully")
         return authorization
     else:
         print(f"Failed to login. Status code: {response_auth.status_code}")
@@ -76,14 +75,20 @@ def map_response(epd: dict) -> dict:
 
 def write_csv_others(title: str, epds: list):
     new_data = pd.DataFrame(epds)
-    existing_data = pd.read_csv(f"{title}.csv")
+    try:
+        existing_data = pd.read_csv(f"{title}.csv")
+    except FileNotFoundError:
+        existing_data = pd.DataFrame()
 
     if not new_data.equals(existing_data):
         new_data.to_csv(f"{title}.csv", index=False)
 
 def write_csv_cement(epds: list):
     new_data = pd.DataFrame(epds)
-    existing_data = pd.read_csv("Cement.csv")
+    try:
+        existing_data = pd.read_csv("Cement.csv")
+    except FileNotFoundError:
+        existing_data = pd.DataFrame()
 
     if not new_data.equals(existing_data):
         new_data.to_csv("Cement.csv", index=False)
