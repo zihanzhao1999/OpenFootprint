@@ -34,7 +34,7 @@ def get_auth():
         return authorization
     else:
         print(f"Failed to login. Status code: {response_auth.status_code}")
-        print("Response body:" + response_auth.json())
+        print("Response body:", response_auth.json())
 
 def fetch_a_page(page: int, headers, state: str) -> list:
     logging.info(f'Fetching state: {state}, page: {page}')
@@ -109,6 +109,9 @@ def write_epd_to_csv(epds: list, state: str):
 
 if __name__ == "__main__":
     authorization = get_auth()
-    for state in states:
-        results = fetch_epds(state, authorization)
-        write_epd_to_csv(results, state)
+    if authorization:
+        for state in states:
+            results = fetch_epds(state, authorization)
+            write_epd_to_csv(results, state)
+    else:
+        print("Authorization failed, exiting...")
