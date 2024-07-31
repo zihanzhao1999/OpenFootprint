@@ -9,21 +9,33 @@ View our [Javascript for DuckDB](tables.html) - TO DO: Debug Javascript or start
 We recommend [DBeaver](https://dbeaver.io/) - a free universal SQL database desktop app
 
 ## Overview
-The <!-- Loren couldn't find load_data.py, so he's guessing duckdb-db-loader.py is the new name. -->[duckdb-db-loader.py](https://github.com/ModelEarth/OpenFootprint/blob/main/prep/sql/duckdb/duckdb-db-loader.py)  script is designed to load data from a CSV file into a DuckDB database. It provides flexibility in loading data from both a URL and a local file, dynamically creating a table in [DuckDB](https://duckdb.org/docs/api/r.html) based on the columns of the input data, and allowing users to choose whether to append new data to an existing table or replace existing data.
+The <!-- Loren couldn't find load_data.py, so he's guessing duckdb-db-loader.py is the new name. -->[duckdb-db-loader.py](https://github.com/ModelEarth/OpenFootprint/blob/main/prep/sql/duckdb/duckdb-db-loader.py)  script is designed to load data from a CSV file into a DuckDB database. It provides flexibility in loading data from both a URL and a local file, dynamically creating a table in [DuckDB](https://duckdb.org/docs/api/r.html) based on the columns of the input data, and allowing users to choose whether to append new data to an existing table or replace existing data. The user is prompted to either enter a URL for a YAML file or provide the path to a locally stored YAML file. This YAML file serves as a reference, allowing us to map file names to the desired table names, and to determine which columns to omit or retain. Using this information, a new table will be created with the specified table name, including only the retained columns and excluding those listed for omission.
 
 Table migrations and column names are set in [create-database.yaml](https://github.com/ModelEarth/OpenFootprint/blob/main/impacts/exiobase/US-source/create-database.yaml)
 The resulting 8.4MB **US-2020-17schema.duckdb** database resides in [OpenFootprint/impacts/exiobase/US-source](https://github.com/ModelEarth/OpenFootprint/tree/main/impacts/exiobase/US-source)
 
 ## Requirements
-- Python 3.x
-- DuckDB
-- pandas
+- Python 3.6 or higher installed. Required Python packages:
+- requests: For making HTTP requests to download files from URLs.
+- yaml: For loading and parsing YAML files.
+- duckdb: For interacting with DuckDB databases
+- pandas: For data manipulation and analysis.
+
+
+### Download DuckDB:
+
+Download and install DuckDB from DuckDB website.
+
+### Prepare Data and Configuration:
+
+Ensure your CSV files are accessible either via URLs or locally.
+Prepare a create-database.yaml file specifying the source and configuration of your CSV files.
 
 ## Usage
 1. Clone or download the repository to your local machine.
 2. Install the required Python libraries (`duckdb` and `pandas`) using pip:
    ```sh
-   pip install duckdb pandas
+   pip install duckdb pandas requests pyyaml
    ```
 3. Run the script duckdb-db-loader.py:
    ```sh
@@ -54,6 +66,20 @@ The resulting 8.4MB **US-2020-17schema.duckdb** database resides in [OpenFootpri
 ### 5. Verification
 - After loading the data, the script verifies the number of rows loaded into the DuckDB table and displays the count to the user.
 
+
+
+### Monitor Progress:
+
+The script will output status messages indicating the loading and transformation of data, as well as any errors encountered.
+
+### YAML Configuration (create-database.yaml):
+
+Modify the YAML file to specify the following:
+source: CSV file names or URLs.
+columns: Column mappings for renaming.
+omit: Columns to omit from CSV files.
+
+
 ## Contributing
 Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
 
@@ -65,63 +91,3 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 <br>
 <div style="height:8px; background-color:orange"></div>
 <br>
-
-Please edit: Move anything missing above, and delete redundant text.
-
-## Overview
-
-This Python script loads data from CSV files into a DuckDB database based on configurations provided in a YAML file. It allows users to choose between loading data from URLs or local files and supports dynamic column mapping and data manipulation before insertion into DuckDB tables.
-Features
-
-Loads data from CSV files into DuckDB tables.
-Supports configuration through a YAML file for specifying data sources and table mappings.
-Allows users to choose between loading data from URLs or local file paths.
-Provides options to delete existing data or append to it when tables already exist in the DuckDB database.
-
-### Prerequisites
-
-Python 3.6 or higher installed.
-Required Python packages:
-
-requests
-yaml
-pandas
-duckdb
-
-### Setup
-
-Install required Python packages using pip:
-
-   pip install requests yaml pandas duckdb
-
-
-### Download DuckDB:
-
-Download and install DuckDB from DuckDB website.
-
-Prepare Data and Configuration:
-Ensure your CSV files are accessible either via URLs or locally.
-Prepare a create-database.yaml file specifying the source and configuration of your CSV files.
-
-Usage
-
-Navigate to the directory containing the script and run:
-
-    python duckdb_data_loader.py
-
-Follow the Prompts:
-Choose whether to load data from URLs or local file paths.
-Provide paths or URLs as required.
-Follow prompts to delete existing data or append to it for existing DuckDB tables.
-
-Monitor Progress:
-
-The script will output status messages indicating the loading and transformation of data, as well as any errors encountered.
-
-YAML Configuration (create-database.yaml):
-
-Modify to specify:
-source: CSV file names or URLs.
-columns: Column mappings for renaming.
-omit: Columns to omit from CSV files.
-
