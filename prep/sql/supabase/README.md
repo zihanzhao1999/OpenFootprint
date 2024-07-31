@@ -6,6 +6,8 @@ This script loads data into a [Supabase PostgreSQL](https://supabase.com) databa
 
 <a href="SupabaseWebpage.html" class="btn btn-success">View Supabase Tables</a>
 
+[Backup of Supabase SQL](database_backup.sql)
+
 ## Features
 
 - Load CSV files from URLs or local file paths.
