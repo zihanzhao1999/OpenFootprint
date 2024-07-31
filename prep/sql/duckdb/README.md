@@ -21,22 +21,18 @@ The resulting 8.4MB **US-2020-17schema.duckdb** database resides in [OpenFootpri
 - duckdb: For interacting with DuckDB databases
 - pandas: For data manipulation and analysis.
 
-***
+
 
 ### Download DuckDB:
-
 Download and install DuckDB from DuckDB website.
 
-***
 
 ### Prepare Data and Configuration:
-
 Ensure your CSV files are accessible either via URLs or locally.
 Prepare a create-database.yaml file specifying the source and configuration of your CSV files.
 
-***
 
-## Usage
+### Usage
 1. Clone or download the repository to your local machine.
 2. Install the required Python libraries (`duckdb` and `pandas`) using pip:
    ```sh
@@ -51,36 +47,31 @@ Prepare a create-database.yaml file specifying the source and configuration of y
    - Provide the URL or the path to the local CSV file.
    - If the table already exists in the DuckDB database, choose whether to delete existing data and add new data, or append new data to the existing data.
 
-***
 
-## Script Breakdown
+### Script Breakdown
 
-### 1. Loading Data
+## 1. Loading Data
 - The script prompts the user to choose between loading data from a URL or a local file.
 - Depending on the user's choice, the script loads the data into a pandas DataFrame using `pd.read_csv()` from either the provided URL or the local file path.
 
-### 2. Dynamically Creating the DuckDB Table
+## 2. Dynamically Creating the DuckDB Table
 - The script dynamically infers the column types from the DataFrame and creates the DuckDB table using a `CREATE TABLE` statement.
 - Column types are inferred as INTEGER, DOUBLE, or VARCHAR based on the data types in the DataFrame.
 
-### 3. Handling Existing Tables
+## 3. Handling Existing Tables
 - If the table already exists in the DuckDB database, the script prompts the user to choose whether to delete existing data and add new data, or append new data to the existing data.
 
-### 4. Loading Data into DuckDB
+## 4. Loading Data into DuckDB
 - The script loads the data into the DuckDB table using an `INSERT INTO` statement.
 - Depending on the user's choice, it either appends the new data to the existing table or replaces existing data with the new data.
 
-### 5. Verification
+## 5. Verification
 - After loading the data, the script verifies the number of rows loaded into the DuckDB table and displays the count to the user.
 
-***
-
 ### Monitor Progress:
-
 The script will output status messages indicating the loading and transformation of data, as well as any errors encountered.
 
 ### YAML Configuration (create-database.yaml):
-
 Modify the YAML file to specify the following:
 source: CSV file names or URLs.
 columns: Column mappings for renaming.
@@ -93,8 +84,3 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 ---
 
 ** When loading local CSV files, provide paths using slashes (/) rather than backslashes (\\).
-
-
-<br>
-<div style="height:8px; background-color:orange"></div>
-<br>
