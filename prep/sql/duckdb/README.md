@@ -21,20 +21,20 @@ The resulting 8.4MB **US-2020-17schema.duckdb** database resides in [OpenFootpri
 - duckdb: For interacting with DuckDB databases
 - pandas: For data manipulation and analysis.
 
----
+***
 
 ### Download DuckDB:
 
 Download and install DuckDB from DuckDB website.
 
----
+***
 
 ### Prepare Data and Configuration:
 
 Ensure your CSV files are accessible either via URLs or locally.
 Prepare a create-database.yaml file specifying the source and configuration of your CSV files.
 
----
+***
 
 ## Usage
 1. Clone or download the repository to your local machine.
@@ -51,7 +51,7 @@ Prepare a create-database.yaml file specifying the source and configuration of y
    - Provide the URL or the path to the local CSV file.
    - If the table already exists in the DuckDB database, choose whether to delete existing data and add new data, or append new data to the existing data.
 
----
+***
 
 ## Script Breakdown
 
@@ -73,7 +73,7 @@ Prepare a create-database.yaml file specifying the source and configuration of y
 ### 5. Verification
 - After loading the data, the script verifies the number of rows loaded into the DuckDB table and displays the count to the user.
 
----
+***
 
 ### Monitor Progress:
 
