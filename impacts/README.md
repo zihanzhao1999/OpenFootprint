@@ -1,7 +1,6 @@
 [International Trade Flow](/useeio.js/footprint/) and [Existing IO Widgets](/io/charts/)
 # OpenFootprint SQL Projects
 
-Visalizations will use the upcoming [USEEIO 50 State JSON API](https://github.com/ModelEarth/OpenFootprint/tree/main/impacts/2020)  
 
 TO DO: In the [Supabase data display](../prep/sql/supabase/SupabaseWebpage.html), add options that merge table in Javascript (Perhaps LEFT JOINs) to provide data for charts.
 
