@@ -6,7 +6,7 @@ This script loads data into a [Supabase PostgreSQL](https://supabase.com) databa
 
 <a href="SupabaseWebpage.html" class="btn btn-success">View Supabase Tables</a>
 
-[Backup of Supabase SQL](database_backup.sql)
+[Backup of Supabase SQL](database_backup.sql) - Contains a backup of the data stored in Supabase. This backup file can be imported directly to set up a new Supabase instance, eliminating the need to load the data using the supabase-db-loader.py script manually.
 
 ## Features
 
