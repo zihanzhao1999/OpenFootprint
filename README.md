@@ -1,3 +1,3 @@
 Open Data Panels
 
-[model.earth OpenFootprint](https://model.earth/openfootprint/)
+[model.earth OpenFootprint](https://model.earth/OpenFootprint/)
