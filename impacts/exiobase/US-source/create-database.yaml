@@ -12,6 +12,7 @@ Flow:
     Unit: Unit
     Context: Context
   omit:
+    - FlowAmount
     - Sector
     - Year
     - ReferenceCurrency
