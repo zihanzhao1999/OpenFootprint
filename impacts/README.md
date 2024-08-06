@@ -23,7 +23,14 @@ TO DO: Add DuckDB to Frontend Display above
 
 <hr>
 
-TO DO: Use <a href="https://github.com/ModelEarth/USEEIO/tree/import_factors/import_factors_exio">generate_import_factors.py</a> to run 2012 to 2016. Try with 2017 schema, and compare to 2012 schema to see if the older data needs it for the sector/commodity names.<br><br> 
+TO DO: Use <a href="https://github.com/ModelEarth/USEEIO/tree/import_factors/import_factors_exio">generate_import_factors.py</a> to run 2012 to 2016. Try with 2017 schema, and compare to 2012 schema to see if the older data needs it for the sector/commodity names.
+
+<hr>
+
+TO DO: From BEA API within <a href="https://github.com/ModelEarth/USEEIO/tree/import_factors/import_factors_exio">generate\_import\_factors.py</a> generate Sector.csv with 2 to 5 character SectorID and SectorName column.
+
+[Current Source](https://github.com/ModelEarth/OpenFootprint/blob/main/impacts/2020/USEEIOv2.0.1-411/sectors.json) - We'll find a .csv file instead in the USEPA repos.
+
 
 <hr><br>
 

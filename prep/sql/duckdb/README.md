@@ -1,11 +1,11 @@
 [OpenFootprint Data Panels](../../../) and [International Trade Flow](../../../../useeio.js/footprint/)
 
-# DuckDB Data Loader
+# DuckDB from .csv files
 
-Our DuckDB parquet tables in [ObservableHQ Dashboard](https://observablehq.com/d/2898d01446cefef1) and [Static Framework](/data-commons/dist/innovation/)
+View our DuckDB parquet tables in [ObservableHQ Dashboard](https://observablehq.com/d/2898d01446cefef1) and [Static Framework](/data-commons/dist/innovation/)
 We recommend [DBeaver](https://dbeaver.io/) - a free universal SQL database desktop app
 
-Also see our [Supabase Data Loader page](../../sql/supabase) and [TO DO List](../../../impacts/)
+Also see our [Supabase from .csv files page](../../sql/supabase) and [TO DO List](../../../impacts/)
 
 View our [Failed Javascript attempt for DuckDB](tables.html) - TO DO: Debug Javascript or start fresh. (We could use functions from [built Observable](/data-commons/dist/innovation/))
 

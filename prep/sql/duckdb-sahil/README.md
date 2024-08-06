@@ -1,8 +1,8 @@
 [OpenFootprint Data Panels](../../../) and [International Trade Flow](../../../../useeio.js/footprint/)
 
-# DuckDB Data Loader
+# DuckDB from .csv files
 
-Also see our [Supabase Data Loader page](../../sql/supabase) and [TO DO List](../../../impacts/)
+Also see our [Supabase from .csv files page](../../sql/supabase) and [TO DO List](../../../impacts/)
 
 View our [Javascript for DuckDB](tables.html) - TO DO: Debug Javascript
 
