@@ -1,4 +1,4 @@
-[Open Data Panels](../) and [International Trade Flow](/useeio.js/footprint/)
+[OpenFootprint Data Panels](../) and [International Trade Flow](/useeio.js/footprint/)
 
 ## Build SQL databases from EEIO CSV files
 

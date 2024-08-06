@@ -1,4 +1,4 @@
-[Footprint Builder](/io/template) and [Open Data Panels](../)
+[Footprint Builder](/io/template) and [OpenFootprint Data Panels](../)
 # Product Comparisons
 
 **Environmental Product Declarations (EPD)**
