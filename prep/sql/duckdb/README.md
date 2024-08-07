@@ -5,7 +5,10 @@
 View our DuckDB parquet tables in [ObservableHQ Dashboard](https://observablehq.com/d/2898d01446cefef1) and [Static Framework](/data-commons/dist/innovation/)
 We recommend [DBeaver](https://dbeaver.io/) - a free universal SQL database desktop app
 
-Also see our [Supabase from .csv files page](../../sql/supabase) and [TO DO List](../../../impacts/)
+Our 8.4MB **US-2020-17schema.duckdb** output resides in [OpenFootprint/impacts/exiobase/US-source](https://github.com/ModelEarth/OpenFootprint/tree/main/impacts/exiobase/US-source). 
+We're moving it into the 2020 subfolder and adding parquet files there also.
+
+Also see our [Supabase from .csv files page](../../sql/supabase), the resulting upcoming [Impact Charts](../../../impacts/) and our [Related Projects TO DO List](../../../prep/)
 
 View our [Failed Javascript attempt for DuckDB](tables.html) - TO DO: Debug Javascript or start fresh. (We could use functions from [built Observable](/data-commons/dist/innovation/))
 
@@ -14,7 +17,7 @@ View our [Failed Javascript attempt for DuckDB](tables.html) - TO DO: Debug Java
 The <!-- Loren couldn't find load_data.py, so he's guessing duckdb-db-loader.py is the new name. -->[duckdb-db-loader.py](https://github.com/ModelEarth/OpenFootprint/blob/main/prep/sql/duckdb/duckdb-db-loader.py)  script is designed to load data from a CSV file into a DuckDB database. It provides flexibility in loading data from both a URL and a local file, dynamically creating a table in [DuckDB](https://duckdb.org/docs/api/r.html) based on the columns of the input data, and allowing users to choose whether to append new data to an existing table or replace existing data. The user is prompted to either enter a URL for a YAML file or provide the path to a locally stored YAML file. This YAML file serves as a reference, allowing users to map file names to the desired table names, and to determine which columns to omit or retain. Using this information, a new table will be created with the specified table name, including only the retained columns and excluding those listed for omission.
 
 Table migrations and column names are set in [create-database.yaml](https://github.com/ModelEarth/OpenFootprint/blob/main/impacts/exiobase/US-source/create-database.yaml)
-The resulting 8.4MB **US-2020-17schema.duckdb** database resides in [OpenFootprint/impacts/exiobase/US-source](https://github.com/ModelEarth/OpenFootprint/tree/main/impacts/exiobase/US-source)
+
 
 ## Requirements
 - Python 3.6 or higher installed. Required Python packages:
