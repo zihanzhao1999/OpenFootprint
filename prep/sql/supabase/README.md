@@ -2,7 +2,7 @@
 
 # Supabase from Exiobase .csv files
 
-This script loads data into a [Supabase PostgreSQL](https://supabase.com) database from CSV files based on a configuration specified in a YAML file. It provides options to load data either from URLs or local file paths and allows the user to either delete existing data in a table or append to it if the table already exists. Also see our [DuckDB from .csv files](../duckdb/) and our [SQL TO DOs](../../../impacts).
+The [supabase-db-loader2.py](https://github.com/ModelEarth/OpenFootprint/tree/main/prep/sql/supabase) script loads data into a [Supabase PostgreSQL](https://supabase.com) database from CSV files based on a configuration specified in a YAML file. It provides options to load data either from URLs or local file paths and allows the user to either delete existing data in a table or append to it if the table already exists. Also see our [DuckDB from .csv files](../duckdb/) and our [SQL TO DOs](../../../impacts).
 
 <a href="../../../impacts" class="btn btn-success" style="float:left">View Impacts (New)</a><a href="SupabaseWebpage.html" class="btn btn-warning" style="float:left">View Tables</a><div style="clear:both"></div>
 
