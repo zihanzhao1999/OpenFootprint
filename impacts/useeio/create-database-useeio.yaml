@@ -1,0 +1,53 @@
+Factor:
+  source: flows.json
+  columns:
+    Index: index
+    FactorID: uuid
+    FactorName: flowable
+    Unit: unit
+    Context: context
+  omit:
+    - id
+
+Commodity:
+  source: sectors.json
+  columns:
+    Index: index
+    CommodityID: code
+    CommodityName: name
+  omit:
+    - id
+    - location
+    - description
+
+Sector:
+  source: sectors.json
+  columns:
+    Index: index
+    SectorID: code
+    SectorName: name
+  omit:
+    - id
+    - location
+    - description
+
+Indicator:
+  source: indicators.json
+  columns:
+    Index: index
+    IndicatorID: code
+    Group: group
+    Unit: unit
+    SimpleUnit: simpleunit
+    SimpleName": simplename"
+  omit:
+    - id
+
+Demand:
+  source: demands.json
+  columns:
+    Type: type
+    System: system
+  omit:
+    - id
+    - year
