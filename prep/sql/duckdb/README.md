@@ -1,6 +1,6 @@
 [OpenFootprint Data Panels](../../../) and [International Trade Flow](../../../../useeio.js/footprint/)
 
-# DuckDB from .csv files
+# DuckDB from Exiobase .csv files
 
 View our DuckDB parquet tables in [ObservableHQ Dashboard](https://observablehq.com/d/2898d01446cefef1) and [Static Framework](/data-commons/dist/innovation/)
 We recommend [DBeaver](https://dbeaver.io/) - a free universal SQL database desktop app

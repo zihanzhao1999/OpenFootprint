@@ -1,6 +1,6 @@
 [International Trade Flow](/useeio.js/footprint/) and [SQL Data Loaders](../../)
 
-# Supabase from .csv files
+# Supabase from Exiobase .csv files
 
 This script loads data into a [Supabase PostgreSQL](https://supabase.com) database from CSV files based on a configuration specified in a YAML file. It provides options to load data either from URLs or local file paths and allows the user to either delete existing data in a table or append to it if the table already exists. Also see our [DuckDB from .csv files](../duckdb/) and our [SQL TO DOs](../../../impacts).
 
