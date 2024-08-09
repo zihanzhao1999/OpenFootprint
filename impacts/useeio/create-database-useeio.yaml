@@ -77,3 +77,8 @@ CommodityCrosswalk:
     BEA_Summary
     BEA_Detail_Waste_Disagg
     ModelScema
+
+SectorSector:
+  source: matrix/A.json
+  indexSource: Sector.SectorID
+  columnPrefix: Sector
