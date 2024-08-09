@@ -9,23 +9,25 @@ Factor:
   omit:
     - id
 
-Commodity:
-  source: sectors.json
-  columns:
-    Index: index
-    CommodityID: code
-    CommodityName: name
-  omit:
-    - id
-    - location
-    - description
-
 Sector:
   source: sectors.json
   columns:
     Index: index
     SectorID: code
     SectorName: name
+  level: country, state
+  omit:
+    - id
+    - location
+    - description
+
+Commodity:
+  source: sectors.json
+  columns:
+    Index: index
+    CommodityID: code
+    CommodityName: name
+  level: country
   omit:
     - id
     - location
@@ -51,3 +53,27 @@ Demand:
   omit:
     - id
     - year
+
+SectorCrosswalk:
+  source: /OpenFootprint/impacts/2020/sectorcrosswalk.csv
+  columns:
+    SectorID: BEA_Summary
+    NAICS: NAICS
+  level: country, state
+  omit:
+    BEA_Sector
+    BEA_Detail
+    BEA_Detail_Waste_Disagg
+    ModelScema
+
+CommodityCrosswalk:
+  source: /OpenFootprint/impacts/2020/sectorcrosswalk.csv
+  columns:
+    CommodityID: BEA_Detail
+    NAICS: NAICS
+  level: country
+  omit:
+    BEA_Sector
+    BEA_Summary
+    BEA_Detail_Waste_Disagg
+    ModelScema
