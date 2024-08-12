@@ -23,6 +23,22 @@ Instead we used raw files in the [Concordance GitHub Repo](https://github.com/in
 
 ## CSV Lookup Files
 
+Columns for a table named 
+
+**Naics**
+Naics (6 digits) - Unique Key
+NaicsDescription
+HarmonizedID (4 digits HS) - not unique
+HarmonizedDescription
+InternationalID (4 digits ISID) - not unique
+InternationalDescription
+
+Naics, NaicsDescription, InternationalID, InternationalDescription
+https://github.com/insongkim/concordance/blob/master/data-raw/2017_NAICS_to_ISIC_4.xlsx
+
+Find a way to relate HS to unique NAICS
+https://github.com/insongkim/concordance/tree/master/data-raw
+
 **HarmonizedNAICS**
 HS (4-digit)
 HS-Description
