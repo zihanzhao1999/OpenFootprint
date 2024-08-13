@@ -6,6 +6,7 @@ Commodity:
 
 Factor:
   source: US_summary_import_factors_exio_2020_17sch.csv
+  unique: FactorID
   columns:
     FactorID: FlowUUID
     FactorName: Flowable
@@ -21,6 +22,55 @@ Factor:
 
 Factor:
   source: US_detail_import_factors_exio_2020_17sch.csv
+  unique: FactorID
+  columns:
+    FactorID: FlowUUID
+    FactorName: Flowable
+    Unit: Unit
+    Context: Context
+  omit:
+    - FlowAmount
+    - Sector
+    - Year
+    - ReferenceCurrency
+    - PriceType
+    - BaseIOLevel
+
+Factor:
+  source: Regional_summary_import_factors_exio_2020_17sch.csv
+  unique: FactorID
+  columns:
+    FactorID: FlowUUID
+    FactorName: Flowable
+    Unit: Unit
+    Context: Context
+  omit:
+    - FlowAmount
+    - Sector
+    - Year
+    - ReferenceCurrency
+    - PriceType
+    - BaseIOLevel
+
+Factor:
+  source: Regional_detail_import_factors_exio_2020_17sch.csv
+  unique: FactorID
+  columns:
+    FactorID: FlowUUID
+    FactorName: Flowable
+    Unit: Unit
+    Context: Context
+  omit:
+    - FlowAmount
+    - Sector
+    - Year
+    - ReferenceCurrency
+    - PriceType
+    - BaseIOLevel
+
+Factor:
+  source: multiplier_df_exio_2020_17sch.csv
+  unique: FactorID
   columns:
     FactorID: FlowUUID
     FactorName: Flowable
