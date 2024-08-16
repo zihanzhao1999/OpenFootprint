@@ -6,9 +6,10 @@ Commodity:
 
 Factor:
   source: US_summary_import_factors_exio_2020_17sch.csv
-  unique: FactorID
+  index: FactorID
+  indextype: 1-based
   columns:
-    FactorID: FlowUUID
+    FactorUUID: FlowUUID
     FactorName: Flowable
     Unit: Unit
     Context: Context
@@ -22,9 +23,10 @@ Factor:
 
 Factor:
   source: US_detail_import_factors_exio_2020_17sch.csv
-  unique: FactorID
+  index: FactorID
+  indextype: 1-based
   columns:
-    FactorID: FlowUUID
+    FactorUUID: FlowUUID
     FactorName: Flowable
     Unit: Unit
     Context: Context
@@ -38,9 +40,10 @@ Factor:
 
 Factor:
   source: Regional_summary_import_factors_exio_2020_17sch.csv
-  unique: FactorID
+  index: FactorID
+  indextype: 1-based
   columns:
-    FactorID: FlowUUID
+    FactorUUID: FlowUUID
     FactorName: Flowable
     Unit: Unit
     Context: Context
@@ -54,9 +57,10 @@ Factor:
 
 Factor:
   source: Regional_detail_import_factors_exio_2020_17sch.csv
-  unique: FactorID
+  index: FactorID
+  indextype: 1-based
   columns:
-    FactorID: FlowUUID
+    FactorUUID: FlowUUID
     FactorName: Flowable
     Unit: Unit
     Context: Context
@@ -70,9 +74,10 @@ Factor:
 
 Factor:
   source: multiplier_df_exio_2020_17sch.csv
-  unique: FactorID
+  index: FactorID
+  indextype: 1-based
   columns:
-    FactorID: FlowUUID
+    FactorUUID: FlowUUID
     FactorName: Flowable
     Unit: Unit
     Context: Context
@@ -88,7 +93,7 @@ SectorFactor:
   source: US_summary_import_factors_exio_2020_17sch.csv
   columns:
     SectorID: Sector
-    FactorID: FlowUUID
+    FactorUUID: FlowUUID
     FactorAmount: FlowAmount
   omit:
     - Year
@@ -103,7 +108,7 @@ CommodityFactor:
   source: US_detail_import_factors_exio_2020_17sch.csv
   columns:
     CommodityID: Sector
-    FactorID: FlowUUID
+    FactorUUID: FlowUUID
     FactorAmount: FlowAmount
   omit:
     - Year
@@ -119,7 +124,7 @@ ImportSectorFactor:
   columns:
     CountryCode: Region
     SectorID: Sector
-    FactorID: FlowUUID
+    FactorUUID: FlowUUID
     FactorAmount: FlowAmount
   omit:
     - Year
@@ -135,7 +140,7 @@ ImportCommodityFactor:
   columns:
     CountryCode: Region
     CommodityID: Sector
-    FactorID: FlowUUID
+    FactorUUID: FlowUUID
     FactorAmount: FlowAmount
   omit:
     - Year
@@ -175,7 +180,7 @@ ImportMultiplierFactor:
     ContributionImportCommodity: cntry_cntrb_to_region_detail
     ContributionSector: cntry_cntrb_to_national_summary
     ContributionCommodity: cntry_cntrb_to_region_summary
-    FactorID: FlowUUID
+    FactorUUID: FlowUUID
     Footprint: EF
   omit:
     - Region

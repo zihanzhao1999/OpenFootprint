@@ -1,8 +1,10 @@
 Factor:
   source: flows.json
+  index: FactorID
+  indextype: 1-based
   columns:
     Index: index
-    FactorID: uuid
+    FactorUUID: uuid
     FactorName: flowable
     Unit: unit
     Context: context
