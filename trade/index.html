@@ -1,161 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head>
-    <meta charset="UTF-8">
-    <title>Trade Flow Map</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-    <style>
-        body {
-            font-family: 'Nunito Sans', Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        }
-        #map {
-            height: 700px;
-            width: 100%;
-        }
-        .arrow {
-            fill: none;
-            stroke-linecap: round;
-        }
-        .checkbox-container {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background: white;
-            padding: 10px;
-            border: 1px solid #ccc;
-            z-index: 1000;
-        }
-    </style>
+<meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>International Trade Flow</title>
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link type="text/css" rel="stylesheet" href="/localsite/css/base.css" id="/localsite/css/base.css" />
+<script type="text/javascript" src="/localsite/js/localsite.js?showheader=true"></script>
+
+<script>
+loadMarkdown("README.md", "readmeDiv", "_parent");
+</script>
+
 </head>
+
 <body>
-    <div id="map"></div>
-    <div class="checkbox-container" id="checkbox-container"></div>
 
-    <div style="margin:10px">
-        TO DO: <a href="index-numbers.html">Add transparency and numbers</a> - 
-        When applying transparency, treat each line and its arrowhead as one object, so the line is not visible through the arrowhead.  Place the volume titles at the center of each line and align the bottom of each title with it's line (using the angle at the line's center). Avoid making any of the titles upside down. So the point of the arrow is visible, hide a small portion of the line path below the arrow.
-        <!--
-        TO DO: Align inflow and outflow lines <a href="curves.html">curves that align (no map)</a>
-        -->
-    </div>
+<div class="content contentpadding large-list">
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-    // Initialize the Leaflet map
-    const map = L.map('map').setView([25, 12], 3); // Center the map and set zoom level
 
-    // Add OpenStreetMap tiles
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '© OpenStreetMap contributors'
-    }).addTo(map);
+<div id="floatRightID" class="floatRight">
+  <b>GitHub Repos</b><br>
+  <a href="https://github.com/modelearth/useeio.js">useeio.js</a><br>
+  <a href="https://github.com/modelearth/useeio-widgets">useeio-widgets</a><br>
+  <a href="https://github.com/modelearth/localsite">localsite repo</a><br>
+  <a href="https://github.com/modelearth/io">io repo</a><br><br>
+  <!-- no longer available, use other API
+<a href="https://smmtool.app.cloud.gov/">API</a><br><br>
+  -->
 
-    // Country coordinates
-    const countries = {
-        "USA": [-99.9018, 37.0902],
-        "China": [104.1954, 35.8617],
-        "Germany": [10.4515, 51.1657],
-        "Brazil": [-51.9253, -14.2350],
-        "India": [78.9629, 20.5937]
-    };
+  <b>Chart Starters</b><br>
 
-    // Trade data
-    const trades = [
-        { from: "USA", to: "China", volume: 500 },
-        { from: "USA", to: "Germany", volume: 300 },
-        { from: "Brazil", to: "USA", volume: 200 },
-        { from: "India", to: "Germany", volume: 150 },
-        { from: "China", to: "India", volume: 400 },
-        { from: "Germany", to: "Brazil", volume: 100 },
-        { from: "India", to: "USA", volume: 250 },
-        { from: "China", to: "Germany", volume: 350 },
-        { from: "Brazil", to: "China", volume: 100 },
-        { from: "Germany", to: "USA", volume: 450 },
-    ];
+  <a href="../../OpenFootprint/trade/map/">Trade Flow Map</a><br>
+  <a href="../charts/d3/chord-diagram/">Chord (D3)</a><br><!-- https://nivo.rocks/chord/ -->
+  <a href="../charts/echarts/sankey-nodeAlign-left.html">Sankey (eCharts)</a><br>
+  <a href="../../OpenFootprint/prep/">Project Overview</a><br><br>
 
-    // Define color scale
-    const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
+  <b>Label Samples</b><br>
+  <a href="/io/template/">Footprint Builder</a><br>
+  <a href="/data-commons/docs/food/">Food Nutrition Label</a>
+</div>
 
-    // Function to project geographic coordinates to Leaflet's layer
-    function projectPoint(lat, lon) {
-        return map.latLngToLayerPoint(new L.LatLng(lon, lat));
-    }
+<div id="readmeDiv"></div>
 
-    // Create an SVG layer on top of the Leaflet map
-    L.svg().addTo(map);
-    const svg = d3.select("#map").select("svg"),
-          g = svg.append("g");
+<div style="clear:both"></div>
 
-    // Function to draw curved lines
-    function drawCurve(d) {
-        const from = projectPoint(...countries[d.from]);
-        const to = projectPoint(...countries[d.to]);
 
-        const dx = to.x - from.x,
-              dy = to.y - from.y,
-              dr = Math.sqrt(dx * dx + dy * dy);
 
-        return `M${from.x},${from.y}A${dr},${dr} 0 0,1 ${to.x},${to.y}`;
-    }
+<div id="schemaDiv"></div>
 
-    // Draw lines with arrowheads
-    trades.forEach((trade, i) => {
-        // Define arrowhead marker with a unique ID for each color
-        const markerId = `arrowhead-${i}`;
-        svg.append("defs").append("marker")
-            .attr("id", markerId)
-            .attr("viewBox", "0 -5 10 10")
-            .attr("refX", 10)
-            .attr("refY", 0)
-            .attr("markerWidth", 6)
-            .attr("markerHeight", 6)
-            .attr("orient", "auto")
-            .append("path")
-            .attr("d", "M0,-5L10,0L0,5")
-            .attr("fill", colorScale(i));
+<h3>YAML used by SQL insert</h3>
 
-        g.append("path")
-            .datum(trade)
-            .attr("class", `arrow arrow-${trade.from}`)
-            .attr("d", drawCurve(trade))
-            .attr("stroke", colorScale(i))
-            .attr("stroke-width", trade.volume / 50)  // Adjust the divisor to scale arrow thickness
-            .attr("marker-end", `url(#${markerId})`);
-    });
+The following YAML for the SQL insert resides at <a href="https://github.com/ModelEarth/OpenFootprint/blob/main/impacts/exiobase/US-source/create-database.yaml">OpenFootprint/impacts/exibase/US-source/create-database.yaml</a><br>
+Created with python from <a href="https://chatgpt.com/share/3a89cc73-c839-4592-bc6e-e82a6a8e400b">From ChatGPT</a> which resides here in a hidden comment.<br>
 
-    // Function to update the lines on map zoom/pan
-    function update() {
-        g.selectAll("path.arrow")
-            .attr("d", drawCurve);
-    }
+<!--
+We could move the following here:
+https://github.com/ModelEarth/OpenFootprint/tree/main/impacts/exiobase/US-source
 
-    // Update the lines on map events
-    map.on("zoomend", update);
-    map.on("moveend", update);
+import yaml
+import pandas as pd
+import sqlalchemy
+from sqlalchemy import create_engine, Table, MetaData
 
-    // Create checkboxes for each "from" country
-    const checkboxContainer = document.getElementById('checkbox-container');
-    const uniqueFromCountries = [...new Set(trades.map(trade => trade.from))];
-    
-    uniqueFromCountries.forEach(country => {
-        const label = document.createElement('label');
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.checked = true;
-        checkbox.value = country;
-        checkbox.addEventListener('change', function() {
-            d3.selectAll(`.arrow-${country}`).attr('visibility', this.checked ? 'visible' : 'hidden');
-        });
+# Load the YAML file
+with open('create-database.yaml', 'r') as file:
+    config = yaml.safe_load(file)
 
-        label.appendChild(checkbox);
-        label.appendChild(document.createTextNode(country));
-        checkboxContainer.appendChild(label);
-        checkboxContainer.appendChild(document.createElement('br'));
-    });
-});
+# Create SQL Alchemy Engine
+engine = create_engine('sqlite:///example.db')
+metadata = MetaData()
 
-    </script>
+# Function to convert column names to CamelCase without underscores
+def to_camel_case(snake_str):
+    components = snake_str.split('_')
+    return components[0].capitalize() + ''.join(x.title() for x in components[1:])
+
+# Process each table in the YAML configuration
+for table_name, table_config in config.items():
+    csv_file = table_config['source']
+    df = pd.read_csv(csv_file)
+
+    columns_map = table_config.get('columns', {})
+    omit_columns = table_config.get('omit', [])
+
+    # Drop omitted columns
+    df.drop(columns=omit_columns, errors='ignore', inplace=True)
+
+    # Rename columns as per the YAML configuration
+    df.rename(columns=columns_map, inplace=True)
+
+    # Generate new column names for remaining columns
+    new_columns = {}
+    for col in df.columns:
+        if col not in columns_map.values():
+            new_columns[col] = to_camel_case(col)
+    df.rename(columns=new_columns, inplace=True)
+
+    # Exclude 'Year' column if not explicitly included in columns_map
+    if 'Year' not in columns_map.values() and 'Year' in df.columns:
+        df.drop(columns=['Year'], inplace=True)
+
+    # Append "US" to the table name
+    table_name = table_name + "US"
+
+    # Insert/Update the data into the database
+    if engine.dialect.has_table(engine, table_name):
+        # Update existing table
+        temp_table_name = table_name + "_temp"
+        df.to_sql(temp_table_name, engine, if_exists='replace', index=False)
+        with engine.connect() as conn:
+            conn.execute(f"""
+                INSERT OR REPLACE INTO {table_name}
+                SELECT * FROM {temp_table_name}
+            """)
+            conn.execute(f"DROP TABLE {temp_table_name}")
+    else:
+        # Create and insert new table
+        df.to_sql(table_name, engine, if_exists='replace', index=False)
+-->
+
+<pre class="yamlPre">
+<div id="yamlDiv"></div>
+</pre>
+
+</div>
 </body>
 </html>
