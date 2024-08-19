@@ -1,4 +1,4 @@
-[OpenFootprint Data Panels](../../../) and [International Trade Flow](../../../../useeio.js/footprint/)
+[Open Data Panels](../../../) and [International Trade Flow](../../../../useeio.js/footprint/)
 
 # DuckDB from Exiobase .csv files
 
