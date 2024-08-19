@@ -2,8 +2,8 @@ TO DO: We'll update our [Supabase data display](../impacts) to include the trade
 We'll display the 3 charts using javascript added to our [earthscape.js Tabulator](/data-pipeline/timelines/training/naics/) that are shared with other pages.
 
 TO DO: <a href="../../OpenFootprint/trade/map/">Trade Flow Map</a>  
-TO DO: <a href="../../useeio.js/charts/d3/chord-diagram/">Chord (D3)</a><!-- https://nivo.rocks/chord/ -->  
-TO DO: <a href="../../useeio.js/charts/echarts/sankey-nodeAlign-left.html">Sankey (eCharts)</a>
+TO DO: <a href="../charts/d3/chord-diagram/">Chord (D3)</a><!-- https://nivo.rocks/chord/ -->  
+TO DO: <a href="../charts/echarts/sankey-nodeAlign-left.html">Sankey (eCharts)</a>
 
 Also see our [timeline chart development](../../data-pipeline/timelines/earthscape/datacommons.html#country=IN,CN,US) with Google Data Commons.
 
