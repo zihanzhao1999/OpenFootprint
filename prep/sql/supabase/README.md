@@ -1,4 +1,4 @@
-[International Trade Flow](/useeio.js/footprint/) and [SQL Data Loaders](../../)
+[International Trade Flow](/OpenFootprint/trade/) and [SQL Data Loaders](../../)
 
 # Supabase from Exiobase .csv files
 

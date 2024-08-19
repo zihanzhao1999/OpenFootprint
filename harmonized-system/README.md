@@ -1,4 +1,4 @@
-[International Trade](/useeio.js/footprint/)
+[International Trade](/OpenFootprint/trade/)
 # Harmonized System (HS)
 
 TO DO: Create a copy of the [Supabase SQL insert python](../prep/sql/supabase/) and add HS tables.

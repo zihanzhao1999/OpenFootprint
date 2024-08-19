@@ -1,4 +1,4 @@
-[Open Data Panels](../) and [International Trade Flow](/useeio.js/footprint/)
+[Open Data Panels](../) and [International Trade Flow](/OpenFootprint/trade/)
 # SQL/Python Project Overview
 
 ## Our SQL trade databases from Exiobase .csv exports
