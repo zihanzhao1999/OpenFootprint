@@ -1,3 +1,9 @@
+Sector:
+  source: Sector.csv
+  columns:
+    SectorID: SectorID
+    SectorName: SectorName
+
 Commodity:
   source: Commodity.csv
   columns:
