@@ -1,6 +1,8 @@
 [Active Projects](../../projects/)
 <h1>International Trade Flow</h1>
 
+[PYMRIO Python Library for Exiobase](https://pymrio.readthedocs.io/en/latest/) and our [CoLab](https://colab.research.google.com/drive/1Q9_1AhdY8uPUfLVUN71X6mKbEy_kqPuQ?usp=sharing) - Multi regional input output analysis.
+
 Checkout our [SQL/Python Project Overview](/OpenFootprint/prep/) - Three Charts using International Exiobase Data
 
 <b>US Bureau of Economic Analysis (BEA) + Exiobase International Trade Data</b>
