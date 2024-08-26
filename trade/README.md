@@ -1,9 +1,9 @@
 [Active Projects](../../projects/)
 <h1>International Trade Flow</h1>
 
-[PYMRIO Python Library for Exiobase](https://pymrio.readthedocs.io/en/latest/) and our [CoLab](https://colab.research.google.com/drive/1Q9_1AhdY8uPUfLVUN71X6mKbEy_kqPuQ?usp=sharing) - Multi regional input output analysis.
+TO DO: Setting up our [Pymiro CoLab](https://colab.research.google.com/drive/1Q9_1AhdY8uPUfLVUN71X6mKbEy_kqPuQ?usp=sharing) with [Pymiro for Exiobase](https://pymrio.readthedocs.io/en/latest/) to output for our Supabase SQL schema. We'll learn from the processes in [generate\_import\_factors.py](https://github.com/ModelEarth/USEEIO/blob/import_factors/import_factors_exio/generate_import_factors.py). In the CoLab, add the [Sector table output](https://github.com/ModelEarth/USEEIO/commit/c10d087d916477b3335127de560d4689fa5818ea) Ben created.
 
-Checkout our [SQL/Python Project Overview](/OpenFootprint/prep/) - Three Charts using International Exiobase Data
+Checkout our [SQL Project Overview](/OpenFootprint/prep/) - Three Charts using International Exiobase Data
 
 <b>US Bureau of Economic Analysis (BEA) + Exiobase International Trade Data</b>
 Our SQL Team has been generating <a href="/OpenFootprint/prep/sql/supabase/">Supabase</a> and <a href="/OpenFootprint/prep/sql/duckdb/">DuckDB</a> databases for US Imports.
