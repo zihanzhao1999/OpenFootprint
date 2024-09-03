@@ -1,7 +1,13 @@
 [Active Projects](../../projects/)
 <h1>International Trade Flow</h1>
 
-TO DO: Setting up our [Pymiro CoLab](https://colab.research.google.com/drive/1Q9_1AhdY8uPUfLVUN71X6mKbEy_kqPuQ?usp=sharing) with [Pymiro for Exiobase](https://pymrio.readthedocs.io/en/latest/) to output for our Supabase SQL schema. We'll learn from the processes in [generate\_import\_factors.py](https://github.com/ModelEarth/USEEIO/blob/import_factors/import_factors_exio/generate_import_factors.py). In the CoLab, add the [Sector table output](https://github.com/ModelEarth/USEEIO/commit/c10d087d916477b3335127de560d4689fa5818ea) Ben created.
+TO DO: Pulling from Exibase directly to Supabase. We're working in a [private ExiobaseSupabase CoLab](https://colab.research.google.com/drive/1LsEDmXrAAGs40OiAKWH48K63E_2bMGBb?usp=sharing). - Ben, Parth, Himanshu, Sahil
+
+TO DO: Compliment the work above with our [Pymiro CoLab](https://colab.research.google.com/drive/1Q9_1AhdY8uPUfLVUN71X6mKbEy_kqPuQ?usp=sharing) with [Pymiro for Exiobase](https://pymrio.readthedocs.io/en/latest/) to output for our Supabase SQL schema. We'll learn from the processes in [generate\_import\_factors.py](https://github.com/ModelEarth/USEEIO/blob/import_factors/import_factors_exio/generate_import_factors.py). 
+
+<!--
+In the CoLab, add the [Sector table output](https://github.com/ModelEarth/USEEIO/commit/c10d087d916477b3335127de560d4689fa5818ea) Ben created.
+-->
 
 Checkout our [SQL Project Overview](/OpenFootprint/prep/) - Three Charts using International Exiobase Data
 
