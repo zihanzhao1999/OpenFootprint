@@ -18,13 +18,16 @@ How to run our repos in a Webroot folder on your computer:
 ## Fetch Product Data
 
 [Python for our EPD pull](https://github.com/ModelEarth/OpenFootprint/tree/main/products/pull/)<!-- product-footprints.py --> - [Resulting Data](https://github.com/ModelEarth/OpenFootprint/tree/main/products/US)
+We're also experimenting with [pulling directly to json](pull/get-json/)
 
 TO DO: Pull csv lists for all states (without cement). Save details as indvidual YAML files. - Yash
 
-June 3, 2024 - <!--Loren -->We copied [product-footprints-bkup.py](https://github.com/ModelEarth/OpenFootprint/tree/main/products/pull/) into [Product Footprints Colab](https://colab.research.google.com/drive/1TJ1fn0-_8EBryN3ih5hZiKLISomOrWDW?usp=sharing)
+June 3, 2024 - <!--Loren -->We copied [product-footprints.py](https://github.com/ModelEarth/OpenFootprint/tree/main/products/pull/) into [Product Footprints Colab](https://colab.research.google.com/drive/1TJ1fn0-_8EBryN3ih5hZiKLISomOrWDW?usp=sharing)
 (We haven't run as CoLab yet.)
 
-TO DO: Activate products/pull/helper.py to refresh API key when it expires using username and password stored in a private config variable.
+For products/pull/product-footprints.py you can set your BuildingTransparency email and password in myconfig.py to call the API.
+
+Active notes are in our Discord group.
 
 
 ## Get API Key for Product Profile YAML
@@ -33,13 +36,13 @@ The [Central Concrete EPD data](https://github.com/modelearth/io/blob/master/tem
 
 **STEP 1:** Create an account at [buildingtransparency.org](https://www.buildingtransparency.org/)
 
-**STEP 2:** Use your name and password to get your bearer "key" here in Swagger: [openepd.buildingtransparency.org](https://openepd.buildingtransparency.org) - Click Authorize.
+**STEP 2:** Use your email and password to get your bearer "key" here in Swagger: [openepd.buildingtransparency.org](https://openepd.buildingtransparency.org) - Click Authorize.
 
 NOTE: Your BuildingTransparency API Key will expire after 3 days. Our python process automatically refreshes the key.
 
-**STEP 3:** Open a command terminal, and get the "Bearer" secret key for your username
+**STEP 3:** Open a command terminal, and get the "Bearer" secret key entering YOUR EMAIL as the username and YOUR PASSWORD.
 
-curl -X POST "https://etl-api.cqd.io/api/rest-auth/login" -H "accept: application/json" -H "Content-Type: application/json" -d "{\"username\":\"YOUR_USERNAME_EMAIL\",\"password\":\"YOUR PASSWORD\"}"
+    curl -X POST -d "{\"username\":\"YOUR EMAIL\",\"password\":\"YOUR PASSWORD\"}" "https://etl-api.cqd.io/api/rest-auth/login" -H "accept: application/json" -H "Content-Type: application/json"
 
 
 **RETURNS**

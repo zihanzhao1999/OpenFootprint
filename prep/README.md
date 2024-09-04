@@ -1,6 +1,10 @@
-[Open Data Panels](../) and [International Trade Flow](/useeio.js/footprint/)
+[Open Data Panels](../) and [International Trade Flow](/OpenFootprint/trade/)
+# SQL/Python Project Overview
 
-## Build SQL databases from EEIO CSV files
+## Our SQL trade databases from Exiobase .csv exports
 
-### &bullet; <a href="/OpenFootprint/prep/sql/supabase/">Supabase Data Loader</a><br>
-### &bullet; <a href="/OpenFootprint/prep/sql/duckdb/">DuckDB Data Loader</a><br>
+International Environmentally-Extended Input-Output (EEIO) Models
+
+### &bullet; <a href="/OpenFootprint/prep/sql/supabase/">Supabase from Exiobase .csv files</a><br>
+### &bullet; <a href="/OpenFootprint/prep/sql/duckdb/">DuckDB from Exiobase .csv files</a><br>
+### &bullet; <a href="/io/about/">Upcoming: from US State .json and .csv files</a><br>
