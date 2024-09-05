@@ -99,8 +99,13 @@ hr {
     <!-- Load Supabase library -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <script>
-        const supabaseUrl = 'https://ivlbvaqjjklzallpvjvi.supabase.co';
-        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml2bGJ2YXFqamtsemFsbHB2anZpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTgyNDIzNzcsImV4cCI6MjAzMzgxODM3N30.GWAujC6YvjoDUF45ZAUDmR2Vu2ZCyyxwbe-zkJWIUFU';
+
+
+        let supabaseUrl = 'https://ivlbvaqjjklzallpvjvi.supabase.co';
+        supabaseUrl = 'https://wovjoodfvamzysoxamdb.supabase.co';
+        let supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml2bGJ2YXFqamtsemFsbHB2anZpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTgyNDIzNzcsImV4cCI6MjAzMzgxODM3N30.GWAujC6YvjoDUF45ZAUDmR2Vu2ZCyyxwbe-zkJWIUFU';
+        supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indvdmpvb2RmdmFtenlzb3hhbWRiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjE3NzQ1MDYsImV4cCI6MjAzNzM1MDUwNn0.hHM2aiNfHQe5Z9u-bKDYf7rImf4FnKCoMyoIc3j2uuk';
+
         const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
         const tables = [
