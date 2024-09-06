@@ -8,7 +8,7 @@ SectorFactor:
   indextype: 1-based
   columns:
     SectorID: Sector
-    FactorUUID: FlowUUID
+    FlowUUID: FlowUUID
     FactorAmount: FlowAmount
   omit:
     - Year
@@ -22,14 +22,14 @@ SectorFactor:
 Commodity:
   CommodityID: Sector
   CommodityName: SectorName
-  
+
 CommodityFactor:
   similar: US_detail_import_factors_exio_2020_17sch.csv
   index: FactorID
   indextype: 1-based
   columns:
     CommodityID: Sector
-    FactorUUID: FlowUUID
+    FlowUUID: FlowUUID
     FactorAmount: FlowAmount
   omit:
     - Year
@@ -47,7 +47,7 @@ ImportSectorFactor:
   columns:
     CountryCode: Region
     SectorID: Sector
-    FactorUUID: FlowUUID
+    FlowUUID: FlowUUID
     FactorAmount: FlowAmount
   omit:
     - Year
@@ -65,7 +65,7 @@ ImportCommodityFactor:
   columns:
     CountryCode: Region
     CommodityID: Sector
-    FactorUUID: FlowUUID
+    FlowUUID: FlowUUID
     FactorAmount: FlowAmount
   omit:
     - Year
@@ -105,7 +105,7 @@ ImportMultiplierFactor:
     ContributionImportCommodity: cntry_cntrb_to_region_detail
     ContributionSector: cntry_cntrb_to_national_summary
     ContributionCommodity: cntry_cntrb_to_region_summary
-    FactorUUID: FlowUUID
+    FlowUUID: FlowUUID
     Footprint: EF
   omit:
     - Region
@@ -119,3 +119,13 @@ ImportMultiplierFactor:
     - PriceType
     - Flowable
     - Context
+
+Factor:
+  index: FactorID
+  indextype: 1-based
+  columns:
+    FactorID: FactorID
+    FlowUUID: FlowUUID
+    FactorName: Flowable
+    Unit: Unit
+    Context: Context
