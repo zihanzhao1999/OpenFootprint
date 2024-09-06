@@ -1,5 +1,5 @@
 SectorFactor:
-  source: US_summary_import_factors_exio_2020_17sch.csv
+  similar: US_summary_import_factors_exio_2020_17sch.csv
   index: FactorID
   indextype: 1-based
   columns:
@@ -16,7 +16,7 @@ SectorFactor:
     - BaseIOLevel
 
 CommodityFactor:
-  source: US_detail_import_factors_exio_2020_17sch.csv
+  similar: US_detail_import_factors_exio_2020_17sch.csv
   index: FactorID
   indextype: 1-based
   columns:
@@ -33,7 +33,7 @@ CommodityFactor:
     - BaseIOLevel
 
 ImportSectorFactor:
-  source: Regional_summary_import_factors_exio_2020_17sch.csv
+  similar: Regional_summary_import_factors_exio_2020_17sch.csv
   index: FactorID
   indextype: 1-based
   columns:
@@ -51,7 +51,7 @@ ImportSectorFactor:
     - BaseIOLevel
 
 ImportCommodityFactor:
-  source: Regional_detail_import_factors_exio_2020_17sch.csv
+  similar: Regional_detail_import_factors_exio_2020_17sch.csv
   index: FactorID
   indextype: 1-based
   columns:
@@ -69,7 +69,7 @@ ImportCommodityFactor:
     - BaseIOLevel
 
 ImportContributions:
-  source: country_contributions_by_sector_2020.csv
+  similar: country_contributions_by_sector_2020.csv
   columns:
     CountryCode: CountryCode
     CommodityID: "BEA_Detail"
@@ -87,7 +87,7 @@ ImportContributions:
     - Region
 
 ImportMultiplierFactor:
-  source: multiplier_df_exio_2020_17sch.csv
+  similar: multiplier_df_exio_2020_17sch.csv
   columns:
     CountryCode: CountryCode
     CommodityID: "BEA_Detail"
