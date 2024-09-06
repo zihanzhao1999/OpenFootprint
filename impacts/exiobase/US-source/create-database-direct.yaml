@@ -1,3 +1,7 @@
+Sector:
+  SectorID: Sector
+  SectorName: SectorName
+
 SectorFactor:
   similar: US_summary_import_factors_exio_2020_17sch.csv
   index: FactorID
@@ -15,6 +19,10 @@ SectorFactor:
     - Context
     - BaseIOLevel
 
+Commodity:
+  CommodityID: Sector
+  CommodityName: SectorName
+  
 CommodityFactor:
   similar: US_detail_import_factors_exio_2020_17sch.csv
   index: FactorID
