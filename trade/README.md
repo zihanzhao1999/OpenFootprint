@@ -1,18 +1,20 @@
 [Active Projects](../../projects/)
 <h1>International Trade Flow</h1>
 
-TO DO: Pulling from Exibase directly to Supabase. We're working in a [private ExiobaseSupabase CoLab](https://colab.research.google.com/drive/1LsEDmXrAAGs40OiAKWH48K63E_2bMGBb?usp=sharing). - Ben, Parth, Himanshu, Sahil
+<b>Exiobase International Trade Data + US Bureau of Economic Analysis (BEA)</b>
+Our SQL Team has been generating <a href="/OpenFootprint/prep/sql/supabase/">Supabase</a> and <a href="/OpenFootprint/prep/sql/duckdb/">DuckDB</a> databases for comparing industries and identifying imports with positive environmental impacts.
 
-TO DO: Compliment the work above with our [Pymiro CoLab](https://colab.research.google.com/drive/1Q9_1AhdY8uPUfLVUN71X6mKbEy_kqPuQ?usp=sharing) with [Pymiro for Exiobase](https://pymrio.readthedocs.io/en/latest/) to output for our Supabase SQL schema. We'll learn from the processes in [generate\_import\_factors.py](https://github.com/ModelEarth/USEEIO/blob/import_factors/import_factors_exio/generate_import_factors.py). 
+We're imitating the data migration in [generate\_import\_factors.py](https://github.com/ModelEarth/USEEIO/blob/import_factors/import_factors_exio/generate_import_factors.py) but we're push directly to Supabase (avoiding csv files).  We're changing FlowUUID to FactorID to reduce the data size.
+
+TO DO: Pulling from Exibase directly to Supabase. We're working in a [ExiobaseSupabase CoLab](https://colab.research.google.com/drive/1LsEDmXrAAGs40OiAKWH48K63E_2bMGBb?usp=sharing). - Ben, Parth, Jack, Satwik
+
+TO DO: Output to Anvil from our [Pymiro CoLab](https://colab.research.google.com/drive/1Q9_1AhdY8uPUfLVUN71X6mKbEy_kqPuQ?usp=sharing) using the [Pymiro for Exiobase library](https://pymrio.readthedocs.io/en/latest/).
 
 <!--
 In the CoLab, add the [Sector table output](https://github.com/ModelEarth/USEEIO/commit/c10d087d916477b3335127de560d4689fa5818ea) Ben created.
 -->
 
 Checkout our [SQL Project Overview](/OpenFootprint/prep/) - Three Charts using International Exiobase Data
-
-<b>US Bureau of Economic Analysis (BEA) + Exiobase International Trade Data</b>
-Our SQL Team has been generating <a href="/OpenFootprint/prep/sql/supabase/">Supabase</a> and <a href="/OpenFootprint/prep/sql/duckdb/">DuckDB</a> databases for US Imports.
 
 
 TO DO: Create [interactive versions](/OpenFootprint/impacts/) of the [three Exiobase charts](https://exiobase.eu)
