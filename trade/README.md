@@ -6,7 +6,7 @@ Our SQL Team has been generating <a href="/OpenFootprint/prep/sql/supabase/">Sup
 
 We're imitating the data migration in [generate\_import\_factors.py](https://github.com/ModelEarth/USEEIO/blob/import_factors/import_factors_exio/generate_import_factors.py) but we're push directly to Supabase (avoiding csv files).  We're changing FlowUUID to FactorID to reduce the data size.
 
-TO DO: Pulling from Exibase directly to Supabase. We're working in a [ExiobaseSupabase CoLab](https://colab.research.google.com/drive/1LsEDmXrAAGs40OiAKWH48K63E_2bMGBb?usp=sharing). - Ben, Parth, Jack, Satwik
+TO DO: Pulling from Exibase directly to Supabase. We're working in a [ExiobaseSupabase CoLab](https://colab.research.google.com/drive/1LsEDmXrAAGs40OiAKWH48K63E_2bMGBb?usp=sharing). - Himanshu, Sahil, Ben, Parth, Jack, Satwik, Indrasenareddy
 
 TO DO: Output to Anvil from our [Pymiro CoLab](https://colab.research.google.com/drive/1Q9_1AhdY8uPUfLVUN71X6mKbEy_kqPuQ?usp=sharing) using the [Pymiro for Exiobase library](https://pymrio.readthedocs.io/en/latest/).
 
