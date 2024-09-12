@@ -12,7 +12,8 @@
 
 <script>
 loadMarkdown("README.md", "readmeDiv", "_parent");
-loadText("../impacts/exiobase/US-source/create-database.yaml", "yamlDiv", "_parent");
+loadText("../impacts/exiobase/US-source/create-database-direct.yaml", "yamlDiv", "_parent");
+loadMarkdown("/localsite/start/steps/github-push.md", "pushGithubDiv", "_parent");
 </script>
 
 </head>
@@ -24,7 +25,7 @@ loadText("../impacts/exiobase/US-source/create-database.yaml", "yamlDiv", "_pare
 
 <div id="floatRightID" class="floatRight">
   <b>GitHub Repos</b><br>
-  <a href="https://github.com/modelearth/useeio.js">useeio.js</a><br>
+  <a href="/useeio.js/footprint/">State Models useeio.js</a><br>
   <a href="https://github.com/modelearth/useeio-widgets">useeio-widgets</a><br>
   <a href="https://github.com/modelearth/localsite">localsite repo</a><br>
   <a href="https://github.com/modelearth/io">io repo</a><br><br>
@@ -54,11 +55,10 @@ loadText("../impacts/exiobase/US-source/create-database.yaml", "yamlDiv", "_pare
 
 <h3>YAML used by SQL insert</h3>
 
-The following YAML for the SQL insert resides at <a href="https://github.com/ModelEarth/OpenFootprint/blob/main/impacts/exiobase/US-source/create-database.yaml">OpenFootprint/impacts/exibase/US-source/create-database.yaml</a><br>
-Created with python from <a href="https://chatgpt.com/share/3a89cc73-c839-4592-bc6e-e82a6a8e400b">From ChatGPT</a> which resides here in a hidden comment.<br><br>
+The following YAML for the SQL insert resides at <a href="https://github.com/ModelEarth/OpenFootprint/blob/main/impacts/exiobase/US-source/">OpenFootprint/impacts/exibase/US-source</a><br>
+Yaml-2-SQL table python from <a href="https://chatgpt.com/share/3a89cc73-c839-4592-bc6e-e82a6a8e400b">From ChatGPT</a> which resides here in a hidden comment.<br><br>
 
-We import to the Factor table multiple times to fetch all the FlowUUID values.<br>
-To reduce dataset size, the large FlowUUID values are replaced with a 1-based index called FactorID.
+To reduce dataset size, the large FlowUUID values are replaced with a 1-based index called FactorID related to 4 or more other tables.
 <!--
 We could move the following here:
 https://github.com/ModelEarth/OpenFootprint/tree/main/impacts/exiobase/US-source
@@ -127,7 +127,8 @@ for table_name, table_config in config.items():
 
 <pre class="yamlPre">
 <div id="yamlDiv"></div>
-</pre>
+</pre><br>
+<div id="pushGithubDiv"></div>
 
 </div>
 </body>
