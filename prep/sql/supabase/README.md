@@ -2,11 +2,13 @@
 
 # Supabase from Exiobase .csv files
 
-The [supabase-db-loader2.py](https://github.com/ModelEarth/OpenFootprint/tree/main/prep/sql/supabase) script loads data into a [Supabase PostgreSQL](https://supabase.com) database from CSV files based on a configuration specified in a YAML file. It provides options to load data either from URLs or local file paths and allows the user to either delete existing data in a table or append to it if the table already exists. Also see our [DuckDB from .csv files](../duckdb/) and our [SQL TO DOs](../../../impacts).
+We're replacing the [supabase-db-loader2.py](https://github.com/ModelEarth/OpenFootprint/tree/main/prep/sql/supabase) csv-pull script with the new direct [create-database-direct.yaml](https://github.com/ModelEarth/OpenFootprint/blob/main/impacts/exiobase/US-source/create-database-direct.yaml) process.
+
+The new CoLab will load directly into the [Supabase PostgreSQL](https://supabase.com) from the Exiobase API based on configuration on the YAML file. It will also provide options to load data from URLs. We'll have a toggle in the CoLab to send to DuckDB .parquet files (or .feather files), similar to the prior [DuckDB from .csv files](../duckdb/). Here's our [SQL TO DOs](../../../trade/).
 
 <a href="../../../impacts" class="btn btn-success" style="float:left">View Impacts (New)</a><a href="SupabaseWebpage.html" class="btn btn-warning" style="float:left">View Tables</a><div style="clear:both"></div>
 
-[Backup of Supabase SQL](database_backup.sql) - Contains a backup of the data stored in Supabase. This backup file can be imported directly to set up a new Supabase instance, eliminating the need to load the data using the supabase-db-loader.py script manually.
+[Backup of Supabase SQL](database_backup.sql) - Contains a backup of the data stored in Supabase. This backup file can be imported directly into a new Supabase instance, eliminating the need to load the data using the supabase-db-loader.py script manually. We're also creating [starters for Tableau and PowerBI](/panels/).
 
 ## Features
 
