@@ -8,7 +8,7 @@ From BuildingTransparency.org API
 [View state .csv files pulled from API](https://github.com/ModelEarth/OpenFootprint/tree/main/products/US)  
 [View parsed YAML-TO-JSON-TO-HTML](/io/template/parser/)  
 [BuildingTransparency Feed View (Static EPD json)](/feed/view/#feed=epd)  
-[Product Feed API](/io/template/feed)  
+[Product Feed API](/io/template/feed) - [Current product profile in BuildingTransparency.org](https://buildingtransparency.org/ec3/epds/ec3mmgup)  
 <!--[View as Markdown](/io/template/product/product-concrete.html)-->
 
 
