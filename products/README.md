@@ -4,7 +4,7 @@
 **Environmental Product Declarations (EPD)**
 From BuildingTransparency.org API
 
-[About our Nutrition-style Labels](/io/template/)  
+[Our latest profile label](/food) - [About our Nutrition-style Labels](/io/template/)  
 [View state .csv files pulled from API](https://github.com/ModelEarth/OpenFootprint/tree/main/products/US)  
 [View parsed YAML-TO-JSON-TO-HTML](/io/template/parser/)  
 [BuildingTransparency Feed View (Static EPD json)](/feed/view/#feed=epd)  
