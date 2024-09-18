@@ -14,10 +14,6 @@
         src="https://model.earth/localsite/js/localsite.js?showheader=true&showsearch=true"></script>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
         table {
             width: 100%;
             border-collapse: collapse;
@@ -35,20 +31,6 @@
             padding: 8px;
             text-align: left;
         }
-
-        .btn {
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .btn-success {
-            background-color: #28a745;
-            color: white;
-            border: none;
-        }
-
         .btn-grey {
             background-color: #ccc;
             color: black;
@@ -119,7 +101,7 @@
                 <option value="imports">Imports</option>
             </select>
 
-            <button class="btn btn-grey" onclick="showCustomize()">Customize</button>
+            <button class="btn btn-success" onclick="showCustomize()">Customize</button>
         </div>
 
         <!-- Customize Section -->
@@ -138,7 +120,8 @@
                     <select id="column-select"></select>
                 </div>
                 <div>
-                    <button class="btn btn-success" onclick="fetchAndPopulate()">View</button>
+                    <br>
+                    <button class="btn btn-success" style="width:80px" onclick="fetchAndPopulate()">View</button>
                     <button class="btn btn-grey" onclick="hideFilters()">X</button>
                 </div>
             </div>
@@ -146,7 +129,7 @@
 
         <!-- SQL Textbox -->
         <textarea id="query" placeholder="Write your SQL query here"></textarea>
-        <div id="clearButton" class="btn btn-grey" style="max-width:120px" onclick="clearResults()">Clear</div>
+        <div id="clearButton" class="btn btn-grey" style="max-width:100px" onclick="clearResults()">Clear</div>
 
         <!-- Results Table -->
         <div id="results"></div>
