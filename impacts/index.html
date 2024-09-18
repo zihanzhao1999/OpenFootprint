@@ -59,6 +59,7 @@
             width: 100%;
             height: 150px;
             margin-top: 20px;
+            margin-bottom: 10px;
             display: none;
             /* Hidden initially */
         }
@@ -67,10 +68,13 @@
             margin-top: 20px;
         }
 
-        .dropdown {
+        .dropdowns {
             margin-bottom: 20px;
         }
-
+        .dropdowns div {
+            float: left;
+            padding-right: 10px;
+        }
         hr {
             margin-top: 22px;
             margin-bottom: 24px;
@@ -106,7 +110,7 @@
 
         <!-- View Section -->
         <div id="view-section">
-            <label for="view-select">Select View:</label>
+            <label for="view-select">Select View:</label><br>
             <select id="view-select" onchange="fetchViewData(this.value)">
                 <option value="">Select a view</option>
                 <option value="industries">Industries (Sectors)</option>
@@ -120,24 +124,29 @@
 
         <!-- Customize Section -->
         <div id="customize-section">
-            <div class="dropdown">
-                <label for="table1-select">Select first table:</label>
-                <select id="table1-select" onchange="populateColumnSelect()"></select>
-
-                <label for="table2-select">Select second table:</label>
-                <select id="table2-select" onchange="populateColumnSelect()"></select>
-
-                <label for="column-select">Select common column:</label>
-                <select id="column-select"></select>
+            <div class="dropdowns">
+                <div>
+                    <label for="table1-select">Select first table:</label><br>
+                    <select id="table1-select" onchange="populateColumnSelect()"></select>
+                </div>
+                <div>
+                    <label for="table2-select">Select second table:</label><br>
+                    <select id="table2-select" onchange="populateColumnSelect()"></select>
+                </div>
+                <div>
+                    <label for="column-select">Select common column:</label><br>
+                    <select id="column-select"></select>
+                </div>
+                <div>
+                    <button class="btn btn-success" onclick="fetchAndPopulate()">View</button>
+                    <button class="btn btn-grey" onclick="hideFilters()">X</button>
+                </div>
             </div>
-
-            <button class="btn btn-success" onclick="fetchAndPopulate()">View</button>
-            <button class="btn btn-grey" onclick="hideFilters()">X</button>
         </div>
 
         <!-- SQL Textbox -->
         <textarea id="query" placeholder="Write your SQL query here"></textarea>
-        <div id="clearButton" class="btn btn-grey" onclick="clearResults()">Clear</div>
+        <div id="clearButton" class="btn btn-grey" style="max-width:120px" onclick="clearResults()">Clear</div>
 
         <!-- Results Table -->
         <div id="results"></div>
