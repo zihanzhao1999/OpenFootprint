@@ -20,7 +20,7 @@ How to run our repos in a Webroot folder on your computer:
 [Python for our EPD pull](https://github.com/ModelEarth/OpenFootprint/tree/main/products/pull/)<!-- product-footprints.py --> - [Resulting Data](https://github.com/ModelEarth/OpenFootprint/tree/main/products/US)
 We're also experimenting with [pulling directly to json](pull/get-json/)
 
-TO DO: Pull csv lists for all states (without cement). Save details as indvidual YAML files. - Yash
+TO DO: Pull csv lists for all states (without cement). Save details as indvidual YAML files. Include all the impact (emmissions, etc) in each profile. Login to BuildingTransparency.org to view a [detail sample](https://buildingtransparency.org/ec3/epds/ec3mmgup).  Update our notes with your findings and progress. You can use Postman or another app to explore the BuildingTransparency APIs.
 
 June 3, 2024 - <!--Loren -->We copied [product-footprints.py](https://github.com/ModelEarth/OpenFootprint/tree/main/products/pull/) into [Product Footprints Colab](https://colab.research.google.com/drive/1TJ1fn0-_8EBryN3ih5hZiKLISomOrWDW?usp=sharing)
 (We haven't run as CoLab yet.)
