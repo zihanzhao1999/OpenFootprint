@@ -6,10 +6,14 @@ Our SQL Team has been generating <a href="/OpenFootprint/prep/sql/supabase/">Sup
 
 We're imitating the data migration in [generate\_import\_factors.py](https://github.com/ModelEarth/USEEIO/blob/import_factors/import_factors_exio/generate_import_factors.py) but we're push directly to Supabase (avoiding csv files).  We're changing FlowUUID to FactorID to reduce the data size.
 
-TO DO: Pulling from Exibase directly to Supabase.  
+TO DO: Pulling from Exiobase directly to Supabase.  
 We're working in a [ExiobaseSupabase CoLab](https://colab.research.google.com/drive/1LsEDmXrAAGs40OiAKWH48K63E_2bMGBb?usp=sharing). - Himanshu, Sahil, Ben, Parth, Jack, Satwik, Indrasenareddy
 
 TO DO: Experiment in our [Pymiro CoLab](https://colab.research.google.com/drive/1Q9_1AhdY8uPUfLVUN71X6mKbEy_kqPuQ?usp=sharing) using the [Pymiro for Exiobase library](https://pymrio.readthedocs.io/en/latest/).
+
+Jaya and Satwick are investigating using .feather within the Pymiro CoLab.
+
+The [Big Sankey](https://github.com/baptiste-an/Application-mapping-GHG) ([view chart](https://sankey.theshiftproject.org/)) uses Plotly with .feather files. We could do the same with [Anvil](https://anvil.works). 
 
 <!--
 In the CoLab, add the [Sector table output](https://github.com/ModelEarth/USEEIO/commit/c10d087d916477b3335127de560d4689fa5818ea) Ben created.
