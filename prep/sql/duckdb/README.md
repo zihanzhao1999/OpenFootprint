@@ -4,6 +4,7 @@
 
 View our DuckDB parquet tables in [ObservableHQ Dashboard](https://observablehq.com/d/2898d01446cefef1) and [Static Framework](/data-commons/dist/innovation/)
 We recommend [DBeaver](https://dbeaver.io/) - a free universal SQL database desktop app
+We read that [Google Looker Studio](https://lookerstudio.google.com/) requires lowercase table names.
 
 Our 8.4MB **US-2020-17schema.duckdb** output resides in [OpenFootprint/impacts/exiobase/US-source](https://github.com/ModelEarth/OpenFootprint/tree/main/impacts/exiobase/US-source). 
 We're moving it into the 2020 subfolder and adding parquet files there also.

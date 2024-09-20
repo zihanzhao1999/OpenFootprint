@@ -9,6 +9,8 @@ We're imitating the data migration in [generate\_import\_factors.py](https://git
 TO DO: Pulling from Exiobase directly to Supabase.  
 We're working in a [ExiobaseSupabase CoLab](https://colab.research.google.com/drive/1LsEDmXrAAGs40OiAKWH48K63E_2bMGBb?usp=sharing). - Himanshu, Sahil, Ben, Parth, Jack, Satwik, Indrasenareddy
 
+TO DO: Update the ExiobaseSupabase CoLab above to pull the same data as <a href="https://github.com/ModelEarth/USEEIO/tree/import_factors/import_factors_exio">generate\_import\_factors.py</a>. Test with the US.  Later we'll add send about 7 countries to unique Supabase instances. - Yuhao, Ruolin, Nancy
+
 TO DO: Experiment in our [Pymiro CoLab](https://colab.research.google.com/drive/1Q9_1AhdY8uPUfLVUN71X6mKbEy_kqPuQ?usp=sharing) using the [Pymiro for Exiobase library](https://pymrio.readthedocs.io/en/latest/).
 
 Jaya and Satwick are investigating using .feather within the Pymiro CoLab.
@@ -22,7 +24,6 @@ In the CoLab, add the [Sector table output](https://github.com/ModelEarth/USEEIO
 TO DO: Create [interactive versions](/OpenFootprint/impacts/) of the [three Exiobase charts](https://exiobase.eu)  
 See our [SQL Project Overview](/OpenFootprint/prep/) - Three Charts using International Exiobase Data
 
-TO DO: Update Exiobase pull to generate trade inflow CSV files for all countries by adding parameters to <a href="https://github.com/ModelEarth/USEEIO/tree/import_factors/import_factors_exio">generate\_import\_factors.py</a>. Send each country to a 2-char folder. Ruolin, Nancy, Yuhao.
 
 TO DO: <a href="/OpenFootprint/prep/">Create International Industry Reports</a> - like Energy Consumption in Drying
 
