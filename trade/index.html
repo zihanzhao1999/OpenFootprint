@@ -53,16 +53,15 @@ loadMarkdown("/localsite/start/steps/github-push.md", "pushGithubDiv", "_parent"
 
 <div id="schemaDiv"></div>
 
-<h3>YAML used by SQL insert</h3>
+<h3>YAML for SQL table names</h3>
 
 The following YAML for the SQL insert resides at <a href="https://github.com/ModelEarth/OpenFootprint/blob/main/impacts/exiobase/US-source/">OpenFootprint/impacts/exibase/US-source</a><br>
-Yaml-2-SQL table python from <a href="https://chatgpt.com/share/3a89cc73-c839-4592-bc6e-e82a6a8e400b">From ChatGPT</a> which resides here in a hidden comment.<br><br>
+Yaml-2-SQL table python from <a href="https://chatgpt.com/share/3a89cc73-c839-4592-bc6e-e82a6a8e400b">From ChatGPT</a> which resides in the textarea below.<br>A version of the following resides in our <a href="https://github.com/ModelEarth/USEEIO/tree/import_factors/import_factors_exio">generate_import_factors.py</a> which we are replacing with a direct pull from the Exiobase API.<br><br>
 
-To reduce dataset size, the large FlowUUID values are replaced with a 1-based index called FactorID related to 4 or more other tables.
-<!--
-We could move the following here:
-https://github.com/ModelEarth/OpenFootprint/tree/main/impacts/exiobase/US-source
+The Exiobase CSV file exports pulled with the yaml reside in <a href="
+https://github.com/ModelEarth/OpenFootprint/tree/main/impacts/exiobase/US-source">impacts/exiobase/US-source</a>
 
+<textarea style="height:100px;width:100%">
 import yaml
 import pandas as pd
 import sqlalchemy
@@ -123,7 +122,10 @@ for table_name, table_config in config.items():
     else:
         # Create and insert new table
         df.to_sql(table_name, engine, if_exists='replace', index=False)
--->
+</textarea><br><br>
+
+
+To reduce the size of our resulting SQL databases, the large FlowUUID values will be replaced with FactorID, a 1-based index relating the Factor table to 4 or more tables.
 
 <pre class="yamlPre">
 <div id="yamlDiv"></div>
