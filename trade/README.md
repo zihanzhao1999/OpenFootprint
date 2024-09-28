@@ -7,7 +7,7 @@ Our SQL Team has been generating <a href="/OpenFootprint/prep/sql/supabase/">Sup
 We're imitating the data migration in [generate\_import\_factors.py](https://github.com/ModelEarth/USEEIO/blob/import_factors/import_factors_exio/generate_import_factors.py) but we're push directly to Supabase (avoiding csv files).  We're changing FlowUUID to FactorID to reduce the data size.
 
 TO DO: Pulling from Exiobase directly to Supabase.  
-We're working in a [ExiobaseSupabase CoLab](https://colab.research.google.com/drive/1LsEDmXrAAGs40OiAKWH48K63E_2bMGBb?usp=sharing). - Himanshu, Sahil, Ben, Parth, Jack, Satwik, Indrasenareddy
+We're working in a [ExiobaseSupabase CoLab](https://colab.research.google.com/drive/1LsEDmXrAAGs40OiAKWH48K63E_2bMGBb?usp=sharing).<!-- Himanshu, Sahil, Ben, Parth, Jack, Satwik, Indrasenareddy-->
 
 TO DO: Update the ExiobaseSupabase CoLab above to pull the same data as <a href="https://github.com/ModelEarth/USEEIO/tree/import_factors/import_factors_exio">generate\_import\_factors.py</a>. Test with the US.  Later we'll add send about 7 countries to unique Supabase instances. - Yuhao, Ruolin, Nancy
 
