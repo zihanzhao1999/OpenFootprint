@@ -66,7 +66,7 @@ SectorCrosswalk:
     BEA_Sector
     BEA_Detail
     BEA_Detail_Waste_Disagg
-    ModelScema
+    ModelSchema
 
 CommodityCrosswalk:
   source: /OpenFootprint/impacts/2020/sectorcrosswalk.csv
@@ -78,7 +78,7 @@ CommodityCrosswalk:
     BEA_Sector
     BEA_Summary
     BEA_Detail_Waste_Disagg
-    ModelScema
+    ModelSchema
 
 SectorSector:
   source: matrix/A.json
