@@ -1,4 +1,4 @@
-[Active Projects](../../projects/)
+[Active Projects](../../projects/) - [State Javascript](/useeio.js/footprint/) and [State Models](/io/about/)
 <h1>International Trade Flow</h1>
 
 <b>Exiobase International Trade Data + US Bureau of Economic Analysis (BEA)</b>
