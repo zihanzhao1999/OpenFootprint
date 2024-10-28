@@ -102,3 +102,5 @@
 2024/10/26 22:13:03 - urllib3.connectionpool - DEBUG - 546 - connectionpool - https://etl-api.cqd.io:443 "POST /api/rest-auth/login HTTP/11" 400 150
 2024/10/27 22:14:17 - urllib3.connectionpool - DEBUG - 1051 - connectionpool - Starting new HTTPS connection (1): etl-api.cqd.io:443
 2024/10/27 22:14:18 - urllib3.connectionpool - DEBUG - 546 - connectionpool - https://etl-api.cqd.io:443 "POST /api/rest-auth/login HTTP/11" 400 150
+2024/10/28 22:14:07 - urllib3.connectionpool - DEBUG - 1051 - connectionpool - Starting new HTTPS connection (1): etl-api.cqd.io:443
+2024/10/28 22:14:07 - urllib3.connectionpool - DEBUG - 546 - connectionpool - https://etl-api.cqd.io:443 "POST /api/rest-auth/login HTTP/11" 400 150
